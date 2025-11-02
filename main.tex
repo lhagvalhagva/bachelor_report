@@ -1,0 +1,998 @@
+%----------------------------------------------------------------------------------------
+%   Доорх хэсгийг өөрчлөх шаардлагагүй
+%----------------------------------------------------------------------------------------
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+\documentclass[12pt,A4]{report}
+
+\usepackage{fontspec,xltxtra,xunicode}
+\setmainfont[Ligatures=TeX]{Times New Roman}
+\setsansfont{Arial}
+
+
+% \usepackage[utf8x]{inputenc}
+% \usepackage[mongolian]{babel}
+%\usepackage{natbib}
+\usepackage{geometry}
+%\usepackage{fancyheadings} fancyheadings is obsolete: replaced by fancyhdr. JL
+\usepackage{fancyhdr}
+\usepackage{float}
+\usepackage{afterpage}
+\usepackage{xcolor}
+
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb,amsbsy}
+\usepackage{dcolumn,array}
+\usepackage{tocloft}
+\usepackage{dics}
+\usepackage{nomencl}
+\usepackage{upgreek}
+\newcommand{\argmin}{\arg\!\min}
+\usepackage{mathtools}
+\usepackage[hidelinks]{hyperref}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{ragged2e}
+
+
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+\usepackage{listings}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\makeatletter
+\usepackage{caption}
+\captionsetup[table]{belowskip=0.5pt}
+\usepackage{subfiles}
+\renewcommand{\arraystretch}{1.25}
+\renewcommand{\lstlistingname}{Код}
+\renewcommand{\lstlistlistingname}{\lstlistingname ын жагсаалт}
+
+\lstdefinelanguage{JavaScript}{
+  keywords={await, async, break, case, catch, class, const, continue, debugger, default, delete, do, else, export, extends, finally, for, function, if, import, in, instanceof, let, new, return, super, switch, this, throw, try, typeof, var, void, while, with, yield},
+  keywordstyle=\color{blue}\bfseries,
+  ndkeywords={boolean, throw, import, export, true, false, null, undefined},
+  ndkeywordstyle=\color{orange}\bfseries,
+  identifierstyle=\color{black},
+  sensitive=false,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  commentstyle=\color{gray}\ttfamily,
+  stringstyle=\color{red}\ttfamily,
+  morestring=[b]',
+  morestring=[b]"
+}
+\usepackage{color}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.99,0.99,0.99}
+ 
+\lstdefinestyle{mystyle}{
+    basicstyle=\ttfamily\small,
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    %basicstyle=\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=false,                 
+    numbers=left,                    
+    numbersep=10pt,                  
+    showspaces=false,                
+    showstringspaces=true,
+    showtabs=false,                  
+    tabsize=2
+}
+ 
+\lstset{style=mystyle, label=DescriptiveLabel} 
+
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+\makenomenclature
+\begin{document}
+
+
+%----------------------------------------------------------------------------------------
+%   Өөрийн мэдээллээ оруулах хэсэг
+%----------------------------------------------------------------------------------------
+
+% Дипломийн ажлын сэдэв
+\title{ERP хэрэглэгчийн портал}
+% Дипломын ажлын англи нэр
+\titleEng{Self-Service Portal for ERP}
+% Өөрийн овог нэрийг бүтнээр нь бичнэ
+\author{Бат-Өлзий Лхагвадорж}
+% Өөрийн овгийн эхний үсэг нэрээ бичнэ
+\authorShort{Б.Лхагвадорж}
+% Хамтарсан удирдагчийн зэрэг цол овгийн эхний үсэг нэр
+\supervisor{Б.Батням}
+
+% СиСи дугаар 
+\sisiId{22B1NUM7166}
+% Их сургуулийн нэр
+\university{МОНГОЛ УЛСЫН ИХ СУРГУУЛЬ}
+% Бүрэлдэхүүн сургуулийн нэр
+\faculty{МЭДЭЭЛЛИЙН ТЕХНОЛОГИ,ЭЛЕКТРОНИКИЙН СУРГУУЛЬ}
+% Тэнхимийн нэр
+\department{МЭДЭЭЛЭЛ, КОМПЬЮТЕРЫН УХААНЫ ТЭНХИМ}
+% Зэргийн нэр
+\degreeName{Бакалаврын судалгааны ажил}
+% Суралцаж буй хөтөлбөрийн нэр
+\programeName{Прорграмм хангамж (D061302)}
+% Хэвлэгдсэн газар
+\cityName{Улаанбаатар}
+% Хэвлэгдсэн огноо
+\gradyear{2025 оны 10 сар}
+
+
+%----------------------------------------------------------------------------------------
+%   Доорх хэсгийг өөрчлөх шаардлагагүй
+%----------------------------------------------------------------------------------------
+\include{main-pre}
+
+% Удиртгалыг оруулж ирэх ба abstract.tex файлд удиртгалаа бичнэ
+\include{abstract}
+
+%----------------------------------------------------------------------------------------
+%   Дипломын үндсэн хэсэг эндээс эхэлнэ
+%----------------------------------------------------------------------------------------
+\chapter{Судалгаа ба Онолын Үндэс}
+\section{ERP системийн тухай ерөнхий ойлголт}
+Enterprise Resource Planning (ERP) систем нь байгууллагын нэгдсэн нөөцийн удирдлагын цогц шийдэл бөгөөд байгууллагын санхүү, нягтлан бодох бүртгэл, борлуулалт, худалдан авалт, агуулах, үйлдвэрлэл, хүний нөөц зэрэг үндсэн бизнесийн үйл ажиллагааг нэг мэдээллийн системд уялдуулан нэгтгэдэг программ хангамж юм. ERP системийн гол зорилго нь мэдээллийн давхардлыг арилгах, шийдвэр гаргалтыг хурдасгах, байгууллагын нөөцийн оновчтой хуваарилалт хийхэд оршино.
+  
+ERP системүүд нь ихэвчлэн модульчлагдсан бүтэцтэй байдаг бөгөөд байгууллага өөрийн хэрэгцээ, үйл ажиллагааны онцлогоос хамаарч санхүү, хүний нөөц, бараа материалын менежмент, борлуулалт, хэрэглэгчийн харилцааны менежмент (CRM) зэрэг модулиудыг сонгон ашигладаг. Модуль тус бүр нь байгууллагын дотоод процессын нэг хэсгийг удирдах бөгөөд эдгээр модулиуд хоорондоо нэг өгөгдлийн сантай, бодит цагийн уялдаатай байдлаар ажилладаг.
+
+ERP системийн хамгийн чухал онцлог нь нэгдсэн өгөгдлийн сан юм. Өгөгдөл нэг л газарт хадгалагдаж, бүх модуль, хэлтэс, хэрэглэгчид ижил мэдээлэлд хандах боломжтой тул мэдээллийн зөрүү, давхардал, алдааны эрсдэл багасдаг. Энэ нь байгууллагын шийдвэр гаргалтын чанарыг сайжруулах, менежментийн түвшинд ил тод байдлыг нэмэгдүүлэхэд чухал ач холбогдолтой.
+  
+ERP системүүдийг арилжааны (proprietary) болон нээлттэй эхийн (open-source) гэсэн хоёр үндсэн төрөлд ангилдаг. Арилжааны ERP системд SAP ERP, Oracle ERP Cloud, Microsoft Dynamics 365 зэрэг томоохон төлөөллүүд ордог бөгөөд эдгээр нь лицензийн төлбөр, дэмжлэгийн зардал өндөр байдаг. Харин нээлттэй эхийн ERP системүүд болох Odoo, ERPNext, Dolibarr, Tryton зэрэг нь програмчлалын код нээлттэй, байгууллагын хэрэгцээнд тохируулан өөрчлөх боломжтой байдгаараа давуу талтай.
+
+Сүүлийн жилүүдэд олон улсын байгууллагууд ERP системийг Software-as-a-Service (SaaS) хэлбэрээр ашиглах хандлагатай болж байна. Энэ тохиолдолд байгууллага ERP системийг үүлэн (cloud) орчинд байршуулж, хэрэглэгч тус бүрийн лицензийн төлбөрөөр ашигладаг. Гэвч энэ хэлбэрийн сул тал нь байгууллагын хэмжээнээс хамаарч лицензийн зардал өндөрсөх, мөн бүх хэрэглэгчдэд бүрэн эрх олгох шаардлага үүсдэг.
+
+Ийм нөхцөлд байгууллагууд ERP системийн үр ашгийг нэмэгдүүлэхийн тулд хэрэглэгчийн хандалтын түвшинг оновчтой тогтоох, шаардлагатай тохиолдолд Portal буюу хөнгөн хэрэглэгчийн орчныг ашиглах замаар лицензийн зардлыг бууруулах стратегийг хэрэгжүүлж байна.
+
+\section{Odoo ERP системийн бүтэц ба архитектур}
+
+Odoo ERP нь байгууллагын бизнесийн процессуудыг автоматжуулах, нэгдсэн мэдээллийн урсгал бий болгох зорилготой модульчлагдсан, гурван шатлалт архитектуртай (Model–View–Controller) систем юм \cite{odoo2024}.
+
+\textbf{Model буюу бизнес логикийн түвшин}
+
+Model түвшин нь системийн гол цөм бөгөөд өгөгдлийн бүтэц, бизнесийн дүрэм, харилцан хамаарлыг тодорхойлдог. Odoo нь Python хэл дээр бичигдсэн ORM (Object Relational Mapping) системийг ашигладаг бөгөөд өгөгдлийн санд хийгдэх бүх үйлдэл (CREATE, READ, UPDATE, DELETE) нь ORM-оор дамждаг.
+
+ORM нь PostgreSQL өгөгдлийн сантай нягт уялдаа бүхий тул өгөгдлийг SQL хэл бичихгүйгээр Python кодоор удирдах боломжийг олгодог.
+Жишээлбэл, \texttt{models.Model}-ийг өргөтгөн тодорхойлсон класс бүр нь өгөгдлийн сангийн нэг хүснэгттэй шууд харгалздаг.
+
+\textbf{Хүснэгтийн уялдаа холбоо (Relationships)}
+
+Odoo-ийн ORM нь өгөгдлийн хоорондын харилцан хамаарлыг гурван үндсэн төрлөөр тодорхойлдог бөгөөд эдгээр нь \texttt{many2one}, \texttt{one2many}, \texttt{many2many} талбаруудаар илэрхийлэгддэг.
+
+\begin{itemize}
+    \item \texttt{many2one} — Нэг хүснэгтийн бичлэгийг нөгөө хүснэгтийн нэг бичлэгтэй холбох хамаарал.
+    Жишээлбэл, \texttt{hr.employee} модель нь "\texttt{department\_id = fields.Many2one('hr.department')} гэж тодорхойлогдсон бол тухайн ажилтан нэг л хэлтэст харьяалагдана.
+    \item \texttt{one2many} — Нэг бичлэгийг олон бичлэгтэй холбох хамаарал.
+    Жишээ нь, \texttt{hr.department} моделийн \texttt{employee\_ids = fields.One2many('hr.employee', 'department\_id')} гэж тодорхойлогдвол тухайн хэлтэст олон ажилтан хамаарна.
+    \item \texttt{many2many} — Хоёр хүснэгтийн хооронд олон-олон харилцаа үүсгэх.
+    Жишээлбэл, \texttt{res.users} ба \texttt{res.groups} хоорондын хамаарал: нэг хэрэглэгч олон \texttt{group}-д харьяалагдаж, нэг \texttt{group} олон хэрэглэгч агуулж болно.
+\end{itemize}
+
+Эдгээр хамаарлууд нь өгөгдлийн логик уялдаа, бүтцийн нэгтгэл, мэдээллийн дахин ашиглалт-ыг хангадаг бөгөөд Odoo ERP системийн модуль хоорондын холболтын үндэс болдог.
+
+\textbf{View буюу хэрэглэгчийн интерфэйсийн түвшин}
+
+View түвшин нь хэрэглэгчийн системтэй харилцах интерфэйс бөгөөд XML хэл дээр тодорхойлогддог. Хэрэглэгчийн харагдац (жагсаалт, форм, канбан, календар, график) нь Odoo-ийн QWeb болон OWL (Odoo Web Library) фреймворкуудаар дамжин рэндэрлэгддэг.
+
+View нь бизнесийн өгөгдлийг ойлгомжтой байдлаар үзүүлэхээс гадна role-based (эрхийн түвшин хамаарах) харагдацын ялгааг дэмждэг. Жишээлбэл, Portal хэрэглэгч зөвхөн өөрийн хүсэлтийн мэдээллийг, харин дотоод ажилтан бүх хэлтсийн өгөгдлийг харах эрхтэй байж болно.
+
+\textbf{Controller буюу удирдлагын түвшин}
+
+Controller нь HTTP хүсэлт болон системийн өгөгдлийн түвшний логикийг холбодог дундын давхарга юм. \texttt{@http.route} декоратор ашиглан хүсэлтийн зам, зөвшөөрлийн түвшин (\texttt{auth='user'}, \texttt{auth='portal'}, \texttt{auth='public'}) болон хүсэлтийн төрлийг (GET, POST) тодорхойлдог.
+
+Controller нь веб эсвэл API орчны (жишээ нь React, Next.js) хүсэлтийг хүлээн авч, ORM руу чиглүүлж, JSON эсвэл HTTP хариу буцаадаг. Энэ механизм нь Portal хэрэглэгчийн орчны үндэс болж, Enterprise лицензгүй хэрэглэгчдэд хязгаарлагдмал CRUD үйлдэл хийх боломжийг олгодог.
+
+\textbf{Модульчлагдсан бүтэц ба өргөтгөх боломж}
+
+Odoo нь бүрэн модульчлагдсан систем бөгөөд модуль бүр тодорхой бизнесийн үйл ажиллагааг хариуцдаг.
+Жишээлбэл:
+
+\begin{itemize}
+    \item \texttt{hr} — хүний нөөцийн бүртгэл
+    \item \texttt{purchase} — худалдан авалт
+    \item \texttt{account} — санхүүгийн бүртгэл
+    \item \texttt{portal} — хязгаарлагдмал хэрэглэгчийн орчин
+\end{itemize}
+
+Модуль бүр дараах бүрэлдэхүүнүүдтэй байна:
+\begin{figure}[H]
+    \centering
+        \includegraphics[width=0.5\textwidth]{images/module_butests.png}
+        \caption{Odoo ERP модулийн бүтэц}
+        \label{fig:odoo_module_structure}
+    \end{figure}
+
+\begin{itemize}
+    \item \texttt{models/} — өгөгдлийн бүтэц, бизнес логик
+    \item \texttt{views/} — хэрэглэгчийн интерфэйс
+    \item \texttt{controllers/} — API болон веб хүсэлт
+    \item \texttt{security/} — хэрэглэгчийн эрх ба хандалтын дүрэм
+\end{itemize} 
+
+Энэхүү модульчлагдсан зохион байгуулалт нь системийг уян хатан, өргөтгөхөд хялбар болгож, байгууллагын өөрчлөлтөд дасан зохицох чадварыг нэмэгдүүлдэг.
+
+\textbf{Техникийн орчин ба холболтын давхарга}
+
+Odoo ERP нь серверийн талд Python, өгөгдлийн талд PostgreSQL, веб серверийн хувьд Nginx эсвэл Odoo-ийн дотоод HTTP серверийг ашигладаг. Хэрэглэгчийн хүсэлт нь HTTP эсвэл JSON-RPC протоколоор Controller түвшинд ирж боловсруулагдана.
+
+Үйлдвэрлэлийн орчинд (production environment) олон worker бүхий архитектур, Redis кэш, longpolling үйлчилгээ ашиглан системийн гүйцэтгэл, найдвартай байдлыг хангадаг.
+
+\section{Portal ба Controller}
+
+\textbf{Ерөнхий ойлголт}
+
+Odoo ERP системийн Portal нь байгууллагын дотоод мэдээллийн системийг хөнгөн хэрэглэгчийн орчинд нээх юм.
+Энэ нь байгууллагын гадаад болон дотоод хэрэглэгчдэд (жишээлбэл: харилцагч, нийлүүлэгч, ажилтан) Enterprise лиценз шаардахгүйгээр тодорхой өгөгдөлд хандах, хүсэлт илгээх боломжийг олгодог.
+
+Portal нь \texttt{share} хэрэглэгчийн эрхийн загварт тулгуурладаг бөгөөд \texttt{res.users} моделийн түвшинд \texttt{share=True} шинж чанараар ялгагдана. Энэ нь системийн "Internal User" төрлийн хэрэглэгчдээс ялгаатай, лицензийн тоонд хамаардаггүй боловч хэрэглэгчийн баталгаажсан (authenticated) төлөвт ажилладаг \cite{odoo2024}.
+
+\textbf{Portal механизмийн бүтэц ба үүрэг}
+
+Odoo ERP системийн Portal орчин нь дараах гурван гол бүрэлдэхүүнээс бүрддэг:
+\begin{itemize}
+    \item \textbf{Portal User (\texttt{res.users.share=True})} — лицензгүй, портал хэлбэрийн хэрэглэгч.
+    Тухайн хэрэглэгч "Portal" бүлэгт (\texttt{base.group\_portal}) харьяалагдах бөгөөд зөвхөн өөрийн мэдээлэлд хандах хязгаарлалттай байдаг.
+    \item \textbf{Portal Controller (Backend Layer)} — серверийн талын хяналтын давхарга бөгөөд хэрэглэгчийн хүсэлтүүдийг хүлээн авч, шалгаж, Model түвшний өгөгдөлтэй харьцан, JSON хариу буцаадаг.
+    \item \textbf{Portal Interface (Frontend Layer – Next.js)} — орчин үеийн веб хэрэглэгчийн интерфэйс бөгөөд Odoo backend-тэй REST эсвэл JSON-RPC протоколоор холбогдон өгөгдлийг үзүүлэх, шинэчлэх, илгээх боломжийг олгодог.
+\end{itemize}
+
+Энэхүү бүтэц нь Odoo-ийн уламжлалт QWeb portal-ыг орчин үеийн вэб технологитой (React / Next.js) уялдуулсан илүү уян хатан архитектур бий болгож байгаа юм.
+
+\textbf{Portal Controller-ийн архитектур}
+
+Odoo 18.0 хувилбарт Controller давхарга нь \texttt{odoo.http.Controller} дээр суурилдаг бөгөөд HTTP хүсэлт болон JSON RPC хүсэлтийг хүлээн авч, бизнес логик (Model)-д хандалт хийнэ.
+
+\begin{lstlisting}[language=Python, caption=Portal Controller-ийн жишээ]
+from odoo import http
+from odoo.http import request
+
+class PortalLeaveController(http.Controller):
+    @http.route('/api/hr-leave/request', type='json', auth='user', methods=['POST'], csrf=False)
+    def create_time_request(self, **kwargs):
+        user = request.env.user
+        if not user.has_group('base.group_portal'):
+            return {'error': 'Access denied'}
+        employee = request.env['hr.employee'].sudo().search([('user_id', '=', user.id)], limit=1)
+        if not employee:
+            return {'error': 'Employee not found'}
+        leave = request.env['hr.leave'].sudo().create({
+            'employee_id': employee.id,
+            'name': kwargs.get('description'),
+            'request_date_from': kwargs.get('date_from'),
+            'request_date_to': kwargs.get('date_to'),
+        })
+        return {'success': True, 'leave_id': leave.id}
+\end{lstlisting}
+
+Энд \texttt{auth='user'} параметр ашиглагдаж байгаа нь портал хэрэглэгчийг баталгаажсан хэрэглэгчийн түвшинд шалгах бөгөөд дараа нь тухайн хэрэглэгч \texttt{base.group\_portal} бүлэгт багтсан эсэхийг шалгаж байна.
+
+Ийм байдлаар \texttt{auth='portal'} гэх тусдаа төрөл шаардлагагүй болсон бөгөөд энэ нь Odoo 16+ хувилбаруудад authentication загвар шинэчлэгдсэнтэй холбоотой юм \cite{odoo18dev}.
+
+\textbf{Portal ба Next.js интерфэйсийн уялдаа}
+
+Next.js суурьтай портал интерфэйс нь Odoo-ийн backend API-д холбогдон хэрэглэгчийн өгөгдөлтэй харьцдаг.
+Хэрэглэгчийн талын (frontend) архитектур дараах дарааллаар ажиллана:
+\begin{itemize}
+    \item \textbf{Login / Session Authentication}
+    Хэрэглэгч нэвтэрсний дараа серверээс cookie эсвэл токен хүлээн авна.
+    \item \textbf{API хүсэлт илгээх}
+    Next.js талд \texttt{fetch} эсвэл \texttt{axios} ашиглан \texttt{/api/...} маршрут руу хүсэлт илгээнэ.
+    \item \textbf{Backend Controller хүлээн авах}
+    Controller нь \texttt{auth='user'} authentication шалгалт хийж, portal хэрэглэгч мөн эсэхийг \texttt{group} болон \texttt{record rule}-аар баталгаажуулна.
+    \item \textbf{Model interaction}
+    Controller нь \texttt{request.env['model.name']} ашиглан бизнес логиктой харьцана.
+    \item \textbf{Response буцаах}
+    Controller нь JSON хэлбэрээр хариу өгч, Next.js UI хэсэгт шинэчилнэ.
+\end{itemize}
+
+\begin{lstlisting}[language=JavaScript, caption=Next.js талын API хүсэлтийн жишээ]
+  await fetch("http://localhost:2050/api/hr-leave/request", {
+    method: "POST",
+      credentials: "include",
+    headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ date_from: "2025-10-16", date_to: "2025-10-17", description: "Leave Request" })
+  });
+\end{lstlisting}
+
+Энэхүү архитектур нь Odoo ERP системийг илүү API-центрик, фронтенд технологид нээлттэй болгож, хэрэглэгчийн туршлагыг сайжруулна.
+
+\textbf{Аюулгүй байдлын давхарга}
+
+Portal хэрэглэгчид системийн өгөгдөлд хандахдаа дараах олон давхар шалгалттай байдаг:
+\begin{itemize}
+    \item \textbf{Authentication Layer:} \texttt{auth='user'} ашиглан session эсвэл токеноор баталгаажуулна.
+    \item \textbf{Authorization Layer:} \texttt{user.has\_group('base.group\_portal')} шалгалт хийж зөвшөөрөгдсөн хэрэглэгчийг ялгана.
+    \item \textbf{Access Control Layer:} \texttt{ir.model.access.csv} болон \texttt{ir.rule} файлуудаар тухайн хэрэглэгч зөвхөн өөрийн өгөгдөлд хандахыг баталгаажуулна.
+\end{itemize}
+
+Ингэснээр portal хэрэглэгч системийн мэдээлэлд бүрэн хандахгүй боловч, өөрийн ажилтай холбоотой процессууд (цагийн хүсэлт, худалдан авалт, ирц бүртгэл гэх мэт) гүйцэтгэх боломжтой болдог.
+Эцэст нь portal болон Controller-ийн нэгдсэн механизм нь Odoo ERP системийн архитектурт нээлттэй, хөнгөн, өргөтгөх боломжтой давхарга бий болгодог.
+
+\section{Хандалтын эрхийн загвар(ir.model.access, ir.rule)}
+
+\textbf{Ерөнхий ойлголт}
+
+Odoo ERP систем нь өндөр түвшний эрхийн удирдлагын (Access Control) механизмаар дамжуулан хэрэглэгчдийн өгөгдөлд хандах эрхийг нарийн хянадаг. Энэхүү эрхийн бүтэц нь хоёр үндсэн түвшинд хийгддэг:
+\begin{itemize}
+    \item \textbf{Model access rule (\texttt{ir.model.access.csv})} — хэрэглэгч тухайн модельд унших (read), бичих (write), үүсгэх (create), устгах (unlink) үйлдэл хийх эрхтэй эсэхийг хянадаг.
+    \item \textbf{Record rule (\texttt{ir.rule})} — тухайн модель доторх аль бичлэгүүдэд (records) хэрэглэгч хандаж болохыг тодорхойлдог.
+\end{itemize}
+
+Эдгээр нь Odoo ERP системийн security layer-ийн гол бүрэлдэхүүн бөгөөд portal хэрэглэгч системийн бизнес логик руу хязгаарлагдмал байдлаар хандах нөхцөл бүрдүүлдэг.
+
+\textbf{Онолын суурь: RBAC}
+
+Odoo-ийн эрхийн загвар нь үндсэндээ рольд суурилсан хандалтын удирдлага (RBAC) загварыг хэрэгжүүлдэг. RBAC нь хэрэглэгчдийг бүлэг/рольд хуваан, тухайн рольд оноосон эрхээр дамжуулан нөөцөд хандахыг зөвшөөрдөг \cite{sandhu1996rbac}. \texttt{res.groups} (роль), \texttt{ir.model.access} (модель түвшний эрх), \texttt{ir.rule} (бичлэгийн түвшний домэйн) гурвын нэгдэл нь Odoo дахь RBAC-ийн практик хэрэгжилт болж, портал хэрэглэгчдэд "зөвхөн өөрийнх"-ийг харах, "зөвшөөрсөн талбар"-т л үйлдэх зэрэг хязгаарлалтыг баталгаажуулна.
+
+\textbf{Portal хэрэглэгчийн хандалтын хязгаарлалт}
+
+Portal хэрэглэгч нь \texttt{share=True} шинжтэй хэрэглэгчийн төрөл бөгөөд системийн "Internal User" төрлийн хэрэглэгчтэй харьцуулахад модель руу шууд хандах эрхгүй байдаг.
+Тодруулбал, portal хэрэглэгч Controller ашиглан REST API эсвэл JSON RPC замаар хүсэлт илгээсэн ч:
+\begin{itemize}
+    \item Тухайн model дээр \texttt{group\_portal} эсвэл түүнтэй холбогдох access rule байхгүй бол \texttt{AccessError} алдаа гарна.
+    \item Portal хэрэглэгчийн \texttt{user\_id} нь "\texttt{base.group\_user}" бүлэгт хамаарахгүй тул default security rule-үүд түүнд үйлчилдэггүй.
+\end{itemize}
+
+Иймд portal хэрэглэгчдэд зориулсан тусгай модель түвшний хандалтын файл (\texttt{ir.model.access.csv}) болон record rule (\texttt{security.xml}) зайлшгүй шаардлагатай байдаг.
+
+\textbf{Model Access Rule (\texttt{ir.model.access.csv})}
+
+\texttt{ir.model.access.csv} файл нь Odoo модулийн root түвшинд байрлах бөгөөд тухайн модульд ямар бүлгийн хэрэглэгч ямар модельд хандах эрхтэйг тодорхойлдог.
+
+Жишээ (Portal хэрэглэгчийн хандалт үүсгэх):
+\begin{lstlisting}[language=, caption=ir.model.access.csv жишээ]
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_leave_portal,hr.leave,hr_holidays.model_hr_leave,base.group_portal,1,1,1,0
+\end{lstlisting}
+
+Энэхүү тохиргоо нь:
+\begin{itemize}
+    \item \texttt{hr.leave} моделийн хувьд портал хэрэглэгчид унших, бичих, үүсгэх (create) эрхийг олгоно,
+    \item устгах (unlink) эрхийг хориглоно.
+\end{itemize}
+
+Ингэснээр Portal Controller нь \texttt{request.env['hr.leave'].sudo()} гэх мэтээр тухайн моделийг дуудахад эрхийн алдаа үүсэхгүйгээр ажиллах боломжтой болно.
+
+\textbf{Record Rule (\texttt{ir.rule})}
+
+Model access rule нь хэрэглэгч тухайн модельд ямар төрлийн үйлдэл хийж болохыг хязгаарладаг бол record rule нь ямар бичлэгүүдэд (rows) хандаж болохыг тодорхойлдог.
+
+Жишээ (Portal хэрэглэгч зөвхөн өөрийн бичлэгт хандах):
+\begin{lstlisting}[language=xml, caption=ir.rule XML жишээ]
+<record id="rule_hr_leave_portal_own" model="ir.rule">
+    <field name="name">Portal: Own Leave Only</field>
+    <field name="model_id" ref="hr_holidays.model_hr_leave"/>
+    <field name="groups" eval="[(4, ref('base.group_portal'))]"/>
+    <field name="domain_force">[('employee_id.user_id', '=', user.id)]</field>
+</record>
+\end{lstlisting}
+
+Энэ нь дараах нөхцөлийг үүсгэнэ:
+\begin{itemize}
+    \item Portal хэрэглэгч зөвхөн өөрийн \texttt{employee\_id}-тай холбоотой чөлөөний хүсэлтүүдийг (\texttt{hr.leave}) харах, шинэчлэх эрхтэй.
+    \item Бусад ажилтны өгөгдөл рүү хандах боломжийг \texttt{domain\_force} нөхцлөөр бүрэн хориглоно.
+\end{itemize}
+
+\textbf{Controller ба Access Rule-ийн уялдаа}
+
+Portal Controller нь HTTP түвшинд хэрэглэгчийн хүсэлтийг хүлээн авч, тухайн хэрэглэгчийн environment (\texttt{request.env})-ээр дамжуулан model-т ханддаг.
+Хэрэв portal хэрэглэгчийн хувьд тухайн model-д access line байхгүй бол:
+
+\texttt{AccessError: The requested operation cannot be completed due to security restrictions.}
+
+гэсэн алдаа буцна.
+
+Иймд controller зөв ажиллахын тулд portal хэрэглэгчийн эрхийн түвшинд:
+\begin{itemize}
+    \item \texttt{ir.model.access.csv} – хэрэглэгчид model руу нэвтрэх үндсэн эрх олгох;
+    \item \texttt{ir.rule} – тухайн хэрэглэгчийн бичлэгийг хязгаарлах нөхцөл (жишээлбэл \texttt{user\_id = user.id}) заах;
+\end{itemize}
+гэсэн хоёр давхар тохиргоо шаардлагатай байдаг.
+
+\textbf{Практик жишээ}
+
+Portal Controller кодын хэсэг:
+\begin{lstlisting}[language=Python, caption=Практик Controller кодын жишээ]
+@http.route('/api/hr-leave/request', type='json', auth='user', methods=['POST'], csrf=False)
+def create_time_request(self, **kwargs):
+    user = request.env.user
+    if not user.has_group('base.group_portal'):
+        return {'error': 'Access denied'}
+
+    leave = request.env['hr.leave'].sudo().create({
+        'employee_id': request.env['hr.employee'].sudo().search([('user_id', '=', user.id)], limit=1).id,
+        'name': kwargs.get('description'),
+        'request_date_from': kwargs.get('date_from'),
+        'request_date_to': kwargs.get('date_to'),
+    })
+    return {'success': True, 'leave_id': leave.id}
+\end{lstlisting}
+
+Энэ controller зөв ажиллахын тулд дараах security файлууд шаардлагатай:
+\begin{itemize}
+    \item \texttt{ir.model.access.csv} — \texttt{base.group\_portal} \texttt{group}-д \texttt{hr.leave} \texttt{model}-д CRUD хандалт олгох,
+    \item \texttt{ir.rule} — зөвхөн тухайн хэрэглэгчийн (\texttt{user.id}) бичлэгүүдэд хандах нөхцөл үүсгэх.
+\end{itemize}
+
+\textbf{Дүгнэлт}
+
+Хандалтын эрхийн загвар нь Odoo ERP системийн security layer-ийн хамгийн чухал хэсэг юм.
+Portal хэрэглэгч Controller ашиглан API түвшинд model-т хандах үед, түүний эрх нь:
+\begin{itemize}
+    \item \texttt{ir.model.access.csv} – үйлдлийн түвшин,
+    \item \texttt{ir.rule} – бичлэгийн түвшин,
+\end{itemize}
+гэсэн хоёр түвшинд хянагддаг.
+
+Ингэснээр:
+\begin{itemize}
+    \item Portal хэрэглэгч Enterprise лицензгүйгээр тодорхой model-д хандалт хийж чадна,
+    \item Мэдээллийн аюулгүй байдал хангагдана,
+    \item Controller түвшинд эрхийн алдаа үүсэхгүйгээр CRUD үйлдэл гүйцэтгэх боломж бүрдэнэ.
+\end{itemize}
+
+Энэ шийдэл нь Portal механизмыг Enterprise лицензтэй системд зардал багатай, хөнгөн хувилбараар ашиглах түлхүүр шийдэл болдог.
+
+\chapter{ENTERPRISE СИСТЕМИЙН ЛИЦЕНЗ АШИГЛАЛТ}
+\section{Байгууллагын ERP хэрэглээний өнөөгийн байдал (case-based судалгаа)}
+
+
+Odoo ERP-ийн Enterprise хувилбар нь нэг хэрэглэгчийн лицензээр бүх модульд хандах эрх олгодог бөгөөд хэрэглэгчийн тоо, ашиглах модулиудаас хамаарч лицензийн өртөг тооцогддог \cite{ventortech}.
+Төлбөртэй internal user бүрийг лицензийн сард/жилд тооцдог тул, аль модуль хэрэглэж байна вэ гэдгээс үл хамааран хэрэглэгчид бүх боломжийг авах боломжтой.
+Ийм зарчим нь бүрэн хэмжээний ERP хэрэгцээтэй ажилтнуудад тустай ч харьцангуй энгийн үйлдэл (цагийн хүсэлт илгээх, худалдан авалтын захиалга хийх, тайлан харах гэх мэт) хийх ажилтнуудад зардлыг нэмэгдүүлдэг.
+Одоогийн судалгаанд хамрагдсан Монголын жижиг, дунд бизнес эрхлэгчдийн төлөөлөл дээр тулгуурлахад дараах нийтлэг нөхцөл илэрсэн.
+
+\textbf{Хэрэглэгчийн лицензийн хэт хэрэглээ}
+
+\begin{itemize}
+    \item \textbf{Ажилтан бүрд бүрэн эрх олгодог.} Олон байгууллага Enterprise лицензтэй учир ажилтнуудаа \texttt{"internal user"} болгон бүртгэж, хэрэглэгчийн тоогоор лицензийн төлбөр төлдөг.
+    Гэтэл ажилчдын дийлэнх нь ERP-ийн цөөн функц (агаарын тээврийн замын хүсэлт, ирц бүртгэл, худалдан авалтын санал, тайлан хянах зэрэг) л ашигладаг бөгөөд энэ хэрэглээ нь Community хувилбарын чөлөөтэй функцээр хангалттай байж болох юм.
+
+    \item \textbf{Enterprise модуль бүрэн ашиглагддаггүй.} Enterprise хувилбар нь Studio, Helpdesk, Document Management, Finance, IoT гэх мэт олон нэмэлт модуль багтаадаг.
+    Судалгаанд хамрагдсан компанийн ихэнх нь ердөө CRM, Sales, Purchase, Attendance зэрэг үндсэн модулиудыг ашиглаж, Enterprise хувилбарын нэмэлт модулиудыг ашигладаггүй. Энэ нь системийн үр ашигт байдал буурч, төлбөрийн үр ашиггүй байдлыг бий болгож байна.
+
+    \item \textbf{Лицензийг хугацаагаар сунгах үед зардлыг өсдөг.} Odoo Enterprise лиценз нь гэрээгээр тодорхой хугацаанд (жишээ нь 1, 2 эсвэл 3 жил) хийгдэх бөгөөд гэрээг сунгах үед нэг хэрэглэгчийн үнэ нэмэгдэх боломжтой \cite{ventortech}. Урт хугацааны гэрээ хийх, багц модулиудыг сонгох зэргээр өртөгийг бууруулах боломжтой боловч маш олон байгууллага үүнийг тооцоолдоггүй.
+\end{itemize}
+
+\textbf{Portal хэрэглэгч ашиглах боломж}
+
+Odoo-гийн лицензийн бодлогын дагуу portal болон public хэрэглэгчид төлбөргүй байдаг; зөвхөн системийн \texttt{"internal"} хэрэглэгчид лицензийн төлбөртэй ордог \cite{ventortech}.
+Гэхдээ олон байгууллага энэ боломжийг бүрэн ашигладаггүй.
+Portal нь дотоод ажилтан, нийлүүлэгч, харилцагч зэрэг гадны хэрэглэгчдэд зориулсан хялбар интерфэйс бөгөөд зөвхөн зөвшөөрсөн өгөгдөл дээр CRUD үйлдэл хийх боломжтой байдаг.
+Байгууллагын кейс судалгаагаар:
+
+\begin{itemize}
+    \item \textbf{Цагийн хүсэлт.} Дотоод ажилтнууд ирц, цагийн хүсэлт гаргахдаа Enterprise хэрэглэгчийн лиценз авсан байх тохиолдол их. Энэ процесс Portal хэрэглэгчээр дамжуулан хэрэгжвэл лиценз шаардлагагүй бөгөөд зөвхөн хэрэгцээтэй мэдээлэлтэй ажиллах интерфэйсээр хязгаарлагдана.
+
+    \item \textbf{Худалдан авалтын санал/захиалга.} Худалдан авалтын хүсэлт илгээх, нийлүүлэгчид санал тавих зэрэг энгийн процессийг portal-аар дамжуулж болно. Өөрөөр хэлбэл, зөвхөн \texttt{"create"} болон \texttt{"read"} эрхтэй portal user-ийг ашиглах замаар төлбөргүй хэрэглэгчээр худалдах процесс удирдах боломжтой.
+
+    \item \textbf{Тайлан үзэх.} Удирдлагын түвшний эсвэл хариуцсан ажилтны хувьд тайлан харах шаардлага гарах үед системд шинээр license худалдан авахгүйгээр portal эрх үүсгэн тайланг хялбар интерфэйсээр үзүүлж болно.
+\end{itemize}
+
+Одоогийн нөхцөл байдлыг нэгтгэн дүгнэхэд, олон байгууллага Odoo Enterprise-ийг өргөнөөр ашиглаж байгаа боловч лицензийн хэт хэрэглээ болон Enterprise модуль ашиглалтын дутагдалтай байдал ажиглагддаг. Portal хэрэглэгчийн орчин, controller механизмыг ашигласнаар лицензтэй хэрэглэгчдийн тоог бууруулах, зардлыг хэмнэх, энгийн хэрэглэгчдэд зориулсан хөнгөн интерфэйсийг бий болгох боломжтой гэж үзэх үндэслэл бий.
+
+\textbf{Хэрэглээний кейсүүд (real-world examples)}
+
+Монголын жижиг, дунд бизнесүүдийн хязгаарлагдмал мэдээлэл дээр үндэслэн дараах кейсүүдийг тэмдэглэж болно.
+\textbf{Кейс 1:}
+
+Нэг компанид Odoo Enterprise 18 хувилбар хэрэгжүүлсэн. Компани нийт 50 ажилтантай бөгөөд тэднээс 15 нь санхүү, борлуулалт, худалдан авалт зэрэг модулиудыг бүрэн эрхээр хэрэглэх шаардлагатай байсан ч бүх 50 ажилтанд Enterprise лиценз олгожээ. Ингэснээр хэрэглэгчийн зардал 50 лицензийн төлбөрөөр тооцогдсон. Судалгааны явцад 35 ажилтан зөвхөн ирц бүртгэх, цагийн хүсэлт гаргах, хувь хүний мэдээлэл засварлах зэрэг үйлдэл л хийдэг нь илэрсэн; эдгээр хэрэглэгчдэд portal эрх хангалттай тул лицензийн тоог 50-аас 15 болгон бууруулах боломжтой байжээ.
+
+\textbf{Кейс 2:}
+
+Нэгэн компанийн хувьд Odoo ERP 16 хувилбарыг нэвтрүүлсэн бөгөөд компанид 50 ажилтан ажилладаг ч Enterprise хувилбарын 20 дотоод (internal) хэрэглэгчийн лиценз худалдан авчээ. Эдгээрийн 5 лицензийг 35 хүн салбар салбартаа ээлжлэн ашиглаж, бараа материалын шаардах үүсгэх, худалдан авалтын захиалга гэх мэтийг бүртгэдэг байв. Энэ компани нэг нэвтрэх эрхийг олон ажилтан дамжуулан хэрэглэсэн нь аюулгүй байдалд эрсдэл үүсгэжээ.Дараа нь хэрвээ ямар нэг асуудал үүсэх бол хэн нь үүнийг хийсэн гэдэг нь мэдэгдэхгүй байх боломжтой
+
+
+Энэхүү хоёр кейсийн аль аль нь Enterprise лицензийн зардлыг бууруулах потенциалтай гэдгийг харуулж байна. Одоогоор олон байгууллага Odoo Enterprise лицензийг түлхүү хэрэглэж, портал хэрэглэгчийн орчныг бүрэн ашиглахгүй байгаа нь зардлын хэт өндөр байдалд хүргэж байна.
+
+\textbf{Дүгнэлт}
+
+Байгууллагууд Odoo Enterprise системийг ашиглахдаа бүхий л ажилтнуудаа \texttt{"internal user"} болгож лицензжүүлэх нь түгээмэл. Гэвч ажилтнуудын олонхи нь ERP-ийн цөөн функцтэй ажилладаг ба энэ нь portal user эрхээр хангагдах боломжтой. Odoo лицензийн бодлогын дагуу portal болон public users нь төлбөргүй байдаг, зөвхөн active internal users-ыг лицензийн төлбөрт оруулдаг \cite{ventortech}. Тиймээс portal механизмыг ашиглаж, хэрэглэгч бүрд шаардлагатай эрхийг оновчтой тохируулах нь Enterprise лицензийн зардлыг бууруулж, системийн ашиглалтыг оновчтой болгох гол арга зам юм.
+
+\section{Лицензийн хүрээг багасгах}
+Энэ хэсэгт Odoo Enterprise-ийн лицензийн өртгийг бууруулах зорилгоор портал хэрэглэгчийн эрхийг ашиглах арга барил, түүний техникийн шийдэл, аюулгүй байдлын зохицуулалт, системийн архитектуртай уялдуулах загвар болон зардлын тооцооллыг танилцуулна. Агуулга нь өмнөх онолын хэсгүүд (Portal механизм, Controller, Access Rules)-т тулгуурласан практик хүрээтэй.
+
+\subsection{Portal хэрэглэгчийн бүтэц, эрхийн хязгаарлалт ба аюулгүй байдал}
+Portal хэрэглэгч нь Odoo системд гадны буюу хөнгөн хэрэглэгчээр бүртгэгдэж, портал интерфэйсээр дамжуулан зөвхөн өөртэй нь хамаарах эсвэл түүнд хуваалцсан мэдээлэлд хандах эрхтэй аккаунт юм \cite{odoo2024}. Odoo-ийн лицензийн бодлогоор идэвхтэй дотоод (internal) хэрэглэгч бүр төлбөртэйд тооцогддог бол, зөвхөн портал (share=True) хандалттай хэрэглэгчид лицензийн төлбөрөөс чөлөөлөгдөнө \cite{ventortech}. Иймээс байгууллагууд хязгаарлагдмал үүрэгтэй олон хэрэглэгчийг портал орчинд ажиллуулах замаар нийт лицензийн зардлаа бууруулах боломжтой \cite{polskaya2023,odoo19terms}.
+
+Портал хэрэглэгчид нь группээрээ \texttt{base.group\_portal}-д харьяалагдаж, анхдагч байдлаар ихэнх модел дээр унших төвтэй, хязгаарлагдмал эрхтэй байдаг. Ерөнхий зарчим нь "өөрийн мэдээлэл" хүрээнд харах эрх давамгайлах ба дурын өгөгдөлд засвар хийх, устгах эрх нь хориглогддог. Энэ нь мэдээллийн аюулгүй байдлыг хамгаалах үндсэн давхарга болж өгдөг. Портал хэрэглэгчдийн ерөнхий зорилго нь дотоод ажилтнуудтай ижил бүрэн backend эрх эдлэх бус, тодорхой процессуудад оролцох хөнгөн орчныг хангахад оршино.
+
+\subsection{Controller, ACL, Record Rule ашиглан аюулгүй байдлыг хангах}
+Портал орчинд өгөгдөл үүсгэх, хянах, хязгаарлахыг дараах гурван техник хэрэгслээр хэрэгжүүлнэ:
+\begin{itemize}
+    \item \textbf{Веб Controller (Backend).} \texttt{@http.route} ашиглан портал хүсэлтийг хүлээн авч, зөвшөөрөгдсөн талбаруудыг валидац хийсний дараа загваруудтай харьцана. \texttt{auth='user'} ба \texttt{user.has\_group('base.group\_portal')} шалгалт нь портал хэрэглэгчдийг ялгана.
+    \item \textbf{ACL — \texttt{ir.model.access.csv}.} Портал хэрэглэгч (\texttt{base.group\_portal})-д хэрэгтэй модел дээр туйлын хязгаарлагдмал \texttt{read/create} (шаардлагатай бол \texttt{write}) эрх олгоно; \texttt{unlink} ихэвчлэн хоригтой.
+    \item \textbf{Record Rule — \texttt{ir.rule}.} "Зөвхөн өөрийн бичлэг" гэх мэт домэйн нөхцлөөр бичлэгийн түвшний хандалтыг хязгаарлана (жишээ нь \texttt{('employee\_id.user\_id', '=', user.id)}). Ингэснээр нэг портал хэрэглэгч бусдын өгөгдөлд хандах боломжгүй.
+\end{itemize}
+
+\subsection{Бүлгийн дүгнэлт}
+Портал хэрэглэгчийн эрхийг зөв зохион байгуулснаар Enterprise лицензийн хамаарлыг бууруулж, зардлын бүтцийг оновчлох боломжтой. Гол зарчим нь: (i) портал талд "үүсгэх/илгээх/харах" зэрэг зайлшгүй шаардлагатай эрхийг ACL-ээр оновчтой олгох, (ii) Record Rule-оор зөвхөн өөрийн мэдээлэл рүүгээ хандах хязгаар тавих, (iii) контроллерийн түвшинд валидац, аудит, хамгаалалтын давхаргыг хангах. Ийм зохицуулалт нь зардал бууруулахын зэрэгцээ ERP ашиглалтын соёлыг төлөвшүүлж, мэдээллийн урсгалыг ил тод, хяналттай болгоно.
+
+\chapter{СИСТЕМИЙН ЗОХИОМЖ АРХИТЕКТУР}
+\section{Системийн шаардлага}
+
+MW Portal системийн архитектур нь байгууллагын дотоод хэрэглэгчдэд зориулан Odoo ERP-ийн үндсэн функцуудыг портал орчинд хялбар, аюулгүй, найдвартай байдлаар хэрэгжүүлэх зорилготой. Системийн шаардлагыг функциональ ба функциональ бус гэж ангилж, дараах байдлаар индексжүүлэн тодорхойлсон.
+
+\subsection{Функциональ шаардлагууд}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{1.5cm}|p{4cm}|p{\dimexpr\textwidth-1.5cm-4cm-4\tabcolsep-4\arrayrulewidth}|}
+\hline
+\textbf{Индекс} & \textbf{Шаардлагын нэр} & \textbf{Тайлбар} \\
+\hline
+ФШ-100 & Хэрэглэгчийн баталгаажуулалт & Хэрэглэгч Odoo-ийн эрхээр портал руу нэвтрэх, профайлын мэдээллийг харах, системээс гарах боломжтой байх. \\
+\hline
+ФШ-200 & Ирцийн check-in, check-out, хийх & Хэрэглэгч ажлын ирцийн check-in, check-out бүртгэл хийх, сүүлийн ирцийн мэдээллийг харах функцтэй байх. \\
+\hline
+ФШ-300 & Цагийн хүсэлт үүсгэх, харах & Хэрэглэгч цагийн төрлийг харах, шинэ хүсэлт үүсгэх, хүсэлтийн төлөвийг хянах боломжтой байх. \\
+\hline
+ФШ-400 & Худалдан авалтын хүсэлт үүсгэх, харах & Хэрэглэгч худалдан авалтын шинэ хүсэлт үүсгэх, жагсаалт, дэлгэрэнгүй мэдээллийг харах, хүсэлтийг үргэлжлүүлэх буюу цуцлах боломжтой байх. \\
+\hline
+ФШ-500 & Барааны шаардах хүсэлт үүсгэх, харах & Бүтээгдэхүүний зарлагын хүсэлт үүсгэх, холбогдох жагсаалт, гүйлгээний дэлгэрэнгүй мэдээллийг харах боломжтой байх. \\
+\hline
+\end{tabular}
+\caption{MW Portal системийн функциональ шаардлагууд}
+\label{tab:functional_requirements}
+\end{table}
+
+\subsubsection{Системийн Функциональ Шаардлагуудын Нарийвчилсан Хүснэгт}
+
+\begin{longtable}{|p{3.5cm}|p{6.0cm}|p{6.0cm}|}
+\hline
+\textbf{Функционал шаардлага ба дэд шаардлага} & \textbf{Тайлбар / Үйлдэл} & \textbf{Холбогдох API ба Frontend бүрэлдэхүүн} \\
+\hline
+\endfirsthead
+\hline
+\textbf{Функционал шаардлага ба дэд шаардлага} & \textbf{Тайлбар / Үйлдэл} & \textbf{Холбогдох API ба Frontend бүрэлдэхүүн} \\
+\hline
+\endhead
+
+\textbf{ФШ-100 Хэрэглэгчийн баталгаажуулалт} & Хэрэглэгч Odoo-ийн эрхээр портал руу нэвтрэх, профайлын мэдээллийг харах, системээс гарах боломжтой байх. &  \\ \hline
+ФШ-101 — Системд нэвтрэх & Хэрэглэгч Odoo ERP эрхээр нэвтрэх. & \texttt{POST /web/session/authenticate} — \texttt{login-form.tsx} \\ \hline
+ФШ-102 — Профайлын мэдээлэл харах & Нэвтэрсэн хэрэглэгчийн мэдээллийг харах. & \texttt{GET /api/auth/employee-profile} — Профайл бүрэлдэхүүн \\ \hline
+ФШ-103 — Системээс гарах & Нэвтрэлт дуусгах. & \texttt{POST /web/session/destroy} — Logout товчлуур \\ \hline
+ФШ-104 — Намайг санаарай & Cookie / localStorage ашиглах. & \texttt{localStorage} — \texttt{login-form.tsx} \\ \hline
+
+\textbf{ФШ-200 Ирцийн удирдлага} & Ажилтан ирцийн check-in/out бүртгэл хийх, сүүлийн ирцийн мэдээлэл харах. &  \\ \hline
+ФШ-201 — Ирц бүртгэх & Check-in/out хийх. & \texttt{POST /api/attendance/create} — Ирц товчлуур \\ \hline
+ФШ-202 — Ирцийн жагсаалт харах & Бүх ирцийн мэдээллийг харах. & \texttt{GET /api/attendance/list} — Ирцийн жагсаалт \\ \hline
+ФШ-203 — Сүүлийн ирц харах & Хамгийн сүүлийн бүртгэл харах. & \texttt{GET /api/attendance/list} — Сүүлийн ирц хэсэг \\ \hline
+
+\textbf{ФШ-300 Цагийн хүсэлт} & Хэрэглэгч цагийн төрлийг харах, хүсэлт үүсгэх, төлөв хянах. &  \\ \hline
+ФШ-301 — Цагийн төрлүүд харах & Боломжит төрлүүдийг харах. & \texttt{GET /api/hr-leave/leave-types} — Drop-down \\ \hline
+ФШ-302 — Урсгал харах & Урсгал сонгох. & \texttt{GET /api/hr-leave/leave-flow} — Drop-down \\ \hline
+ФШ-303 — Хүсэлт үүсгэх & Шинэ хүсэлт илгээх. & \texttt{POST /api/hr-leave/time-request} — Хүсэлт хэлбэр \\ \hline
+ФШ-304 — Хүсэлтүүд харах & Өмнөх хүсэлтүүдийн жагсаалт. & \texttt{GET /api/hr-leave/time-requests} — Жагсаалт бүрэлдэхүүн \\ \hline
+ФШ-305 — Хүсэлтийн төлөв хянах & Хүсэлтийн явцыг харах. & \texttt{GET /api/hr-leave/time-requests} — Төлөвийн хэсэг \\ \hline
+
+\textbf{ФШ-400 Худалдан авалт} & Худалдан авалтын хүсэлт үүсгэх, жагсаалт, дэлгэрэнгүй харах. &  \\ \hline
+ФШ-401 — Хүсэлт үүсгэх & Шинэ худалдан авалтын хүсэлт илгээх. & \texttt{POST /api/purchase-request/create} — Үүсгэх хэлбэр \\ \hline
+ФШ-402 — Хүсэлтүүд харах & Бүх хүсэлтийн жагсаалт. & \texttt{GET /api/purchase-request} — Жагсаалт \\ \hline
+ФШ-403 — Дэлгэрэнгүй харах & Тухайн хүсэлтийн дэлгэрэнгүй. & \texttt{GET /api/purchase-request/<id>} — Дэлгэрэнгүй хуудас \\ \hline
+ФШ-404 — Үргэлжлүүлэх шат & Шат дамжуулах. & \texttt{POST /api/purchase-request/<id>/action-next} — “Үргэлжлүүлэх” товч \\ \hline
+ФШ-405 — Цуцлах & Хүсэлтийг цуцлах. & \texttt{POST /api/purchase-request/<id>/action-cancel} — “Цуцлах” товч \\ \hline
+ФШ-406–410 — Нэмэлт өгөгдлүүд авах & Салбар, агуулах, урсгал, приорити, бүтээгдэхүүн авах. & \texttt{GET /api/purchase-request/...} — Drop-down, сонгох хэсэг \\ \hline
+
+\textbf{ФШ-500 Барааны шаардах} & Бүтээгдэхүүний зарлагын хүсэлт, жагсаалт, дэлгэрэнгүй харах. &  \\ \hline
+ФШ-501 — Шинэ хүсэлт үүсгэх & Зарлагын хүсэлт үүсгэх. & \texttt{POST /api/product-expense/create} — Үүсгэх хэлбэр \\ \hline
+ФШ-502 — Хүсэлтүүд харах & Бүх хүсэлтүүдийн жагсаалт. & \texttt{GET /api/product-expense} — Жагсаалт \\ \hline
+ФШ-503 — Дэлгэрэнгүй харах & Нэг хүсэлтийн дэлгэрэнгүй. & \texttt{GET /api/product-expense/<id>} — Дэлгэрэнгүй хуудас \\ \hline
+ФШ-504–510 — Урсгал, цуцлах, сонголтууд & Агуулах, урсгал, гүйлгээний утга, бүтээгдэхүүн авах. & \texttt{GET /api/product-expense/...} — Drop-down хэсэг \\ \hline
+
+\caption{MW Portal системийн функциональ шаардлагуудын нэгтгэсэн хүснэгт}
+\label{tab:merged_functional_requirements}
+\end{longtable}
+
+
+\section{Ажлын явц}
+
+Доорх хүснэгтүүд нь MW Portal системийн функциональ шаардлагын дагуу бүртгэгдсэн үндсэн хэрэглээний тохиолдлууд (Use Case)-ыг илэрхийлнэ. Эдгээр нь хэрэглэгчийн гүйцэтгэх үйлдлийн зорилго, урьдчилсан нөхцөл, амжилттай ба бүтэлгүйтлийн төгсгөл, үйл явцын алхмуудыг тодорхой заасан болно.
+
+\subsection*{\textbf{ФШ-10: Хэрэглэгчийн баталгаажуулалт}}
+
+\begin{longtable}{|p{4cm}|p{10.5cm}|}
+\hline
+\textbf{Талбар} & \textbf{Тайлбар} \\
+\hline
+\endfirsthead
+
+\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- \textit{Үргэлжлэл}}}\\
+\hline
+\textbf{Талбар} & \textbf{Тайлбар} \\
+\hline
+\endhead
+
+\hline \multicolumn{2}{|r|}{\textit{Үргэлжлэл...}} \\
+\hline
+\endfoot
+
+\hline
+\endlastfoot
+
+\textbf{Use Case нэр} & Хэрэглэгчийн баталгаажуулалт \\
+\hline
+\textbf{Зорилго (Goal)} & Хэрэглэгч системд Odoo эрхээр нэвтэрч, хувийн мэдээлэл харах, системээс гарах боломжтой байх \\
+\hline
+\textbf{Угтвар нөхцөл (Precondition)} & Хэрэглэгчдэд Odoo-н эрх үүссэн, порталд нэвтрэх хаяг байгаа \\
+\hline
+\textbf{Амжилттай төгсгөл (Success Condition)} & Хэрэглэгч амжилттай нэвтэрч, профайлаа харах, системээс гарах үйлдлийг хийж чадах \\
+\hline
+\textbf{Бүтэлгүйтлийн нөхцөл (Failure Condition)} & Нууц үг буруу оруулах, эрх блоклогдсон байх, систем хариу өгөхгүй байх \\
+\hline
+\textbf{Үндсэн тоглогч (Primary Actor)} & Ажилтан (Портал хэрэглэгч) \\
+\hline
+\textbf{Үндсэн үйл явц (Main Flow)} & 1. Хэрэглэгч логин хэсэг рүү орно.\newline 2. Хэрэглэгч и-мэйл, нууц үгээ оруулна.\newline 3. Систем эрхийг шалгаж, нэвтрүүлнэ.\newline 4. Хэрэглэгч профайл мэдээллээ хянах боломжтой болно.\newline 5. "Logout" хийж системээс гарна. \\
+\hline
+\textbf{Өргөтгөл (Extension)} & Байхгүй \\
+\hline
+\textbf{Хувилбарууд (Alternative Flow)} & Нууц үг мартсан тохиолдолд "Forgot Password" урсгалаар сэргээх \\
+\end{longtable}
+
+\subsection*{\textbf{ФШ-20: Ирцийн удирдлага}}
+
+\begin{longtable}{|p{4cm}|p{10.5cm}|}
+\hline
+\textbf{Талбар} & \textbf{Тайлбар} \\
+\hline
+\endfirsthead
+
+\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- \textit{Үргэлжлэл}}}\\
+\hline
+\textbf{Талбар} & \textbf{Тайлбар} \\
+\hline
+\endhead
+
+\hline \multicolumn{2}{|r|}{\textit{Үргэлжлэл...}} \\
+\hline
+\endfoot
+
+\hline
+\endlastfoot
+
+\textbf{Use Case нэр} & Ирц бүртгэх \\
+\hline
+\textbf{Зорилго (Goal)} & Хэрэглэгч ажилдаа ирсэн болон тарсан хугацааг бүртгэх \\
+\hline
+\textbf{Угтвар нөхцөл (Precondition)} & Хэрэглэгч системд амжилттай нэвтэрсэн байна \\
+\hline
+\textbf{Амжилттай төгсгөл (Success Condition)} & Ирцийн бүртгэл үүсэж, системд хадгалагдсан байх \\
+\hline
+\textbf{Бүтэлгүйтлийн нөхцөл (Failure Condition)} & Давхар бүртгэл, интернет холболтгүй, системийн алдаа \\
+\hline
+\textbf{Үндсэн тоглогч (Primary Actor)} & Ажилтан (Портал хэрэглэгч) \\
+\hline
+\textbf{Үндсэн үйл явц (Main Flow)} & 1. Хэрэглэгч "Ирц" хэсэг рүү орно.\newline 2. "Check-in" товчийг дарна.\newline 3. Ажлын цаг дуусахад "Check-out" товч дарна.\newline 4. Ирцийн төлөв харагдана. \\
+\hline
+\textbf{Өргөтгөл (Extension)} & Байхгүй \\
+\hline
+\textbf{Хувилбарууд (Alternative Flow)} & Автомат check-out нөхцөл (урьдчилан тохируулсан үед) \\
+\end{longtable}
+
+\subsection*{\textbf{ФШ-30: Цагийн хүсэлт удирдах}}
+
+\begin{longtable}{|p{4cm}|p{10.5cm}|}
+\hline
+\textbf{Талбар} & \textbf{Тайлбар} \\
+\hline
+\endfirsthead
+
+\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- \textit{Үргэлжлэл}}}\\
+\hline
+\textbf{Талбар} & \textbf{Тайлбар} \\
+\hline
+\endhead
+
+\hline \multicolumn{2}{|r|}{\textit{Үргэлжлэл...}} \\
+\hline
+\endfoot
+
+\hline
+\endlastfoot
+
+\textbf{Use Case нэр} & Цагийн хүсэлт илгээх \\
+\hline
+\textbf{Зорилго (Goal)} & Хэрэглэгч чөлөө авах, илүү цагаар ажиллах хүсэлт гаргах \\
+\hline
+\textbf{Угтвар нөхцөл (Precondition)} & Системд нэвтэрсэн байна \\
+\hline
+\textbf{Амжилттай төгсгөл (Success Condition)} & Хүсэлт системд амжилттай үүсэж, төлөв харагдах \\
+\hline
+\textbf{Бүтэлгүйтлийн нөхцөл (Failure Condition)} & Дутуу мэдээлэл оруулах, систем хариу өгөхгүй байх \\
+\hline
+\textbf{Үндсэн тоглогч (Primary Actor)} & Ажилтан (Портал хэрэглэгч) \\
+\hline
+\textbf{Үндсэн үйл явц (Main Flow)} & 1. "Цагийн хүсэлт" хэсэг рүү орно.\newline 2. Хүсэлтийн төрөл болон хугацааг сонгоно.\newline 3. "Илгээх" товч дарна.\newline 4. Төлөвийг хянана. \\
+\hline
+\textbf{Өргөтгөл (Extension)} & Байхгүй \\
+\hline
+\textbf{Хувилбарууд (Alternative Flow)} & Байхгүй \\
+\end{longtable}
+
+\subsection*{\textbf{ФШ-40: Худалдан авалтын хүсэлт үүсгэх}}
+
+\begin{longtable}{|p{4cm}|p{10.5cm}|}
+\hline
+\textbf{Талбар} & \textbf{Тайлбар} \\
+\hline
+\endfirsthead
+
+\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- \textit{Үргэлжлэл}}}\\
+\hline
+\textbf{Талбар} & \textbf{Тайлбар} \\
+\hline
+\endhead
+
+\hline \multicolumn{2}{|r|}{\textit{Үргэлжлэл...}} \\
+\hline
+\endfoot
+
+\hline
+\endlastfoot
+
+\textbf{Use Case нэр} & Худалдан авалтын хүсэлт \\
+\hline
+\textbf{Зорилго (Goal)} & Ажилтан шаардлагатай бараа/үйлчилгээний худалдан авалтад хүсэлт гаргах \\
+\hline
+\textbf{Угтвар нөхцөл (Precondition)} & Системд нэвтэрсэн байна \\
+\hline
+\textbf{Амжилттай төгсгөл (Success Condition)} & Хүсэлт амжилттай үүсэж, жагсаалт болон дэлгэрэнгүй мэдээлэл харагдах \\
+\hline
+\textbf{Бүтэлгүйтлийн нөхцөл (Failure Condition)} & Бүтээгдэхүүн сонгоогүй, салбар дутуу, системийн алдаа \\
+\hline
+\textbf{Үндсэн тоглогч (Primary Actor)} & Ажилтан (Портал хэрэглэгч) \\
+\hline
+\textbf{Үндсэн үйл явц (Main Flow)} & 1. "Худалдан авалт" хэсэг рүү орно.\newline 2. Бүтээгдэхүүн, тоо хэмжээ, салбарыг сонгоно.\newline 3. "Хүсэлт илгээх" товч дарна.\newline 4. Хүсэлтийн төлөвийг хянаж үзнэ. \\
+\hline
+\textbf{Өргөтгөл (Extension)} & Байхгүй \\
+\hline
+\textbf{Хувилбарууд (Alternative Flow)} & Байхгүй \\
+\end{longtable}
+
+\subsection*{\textbf{ФШ-50: Барааны зарлагын хүсэлт}}
+
+\begin{longtable}{|p{4cm}|p{10.5cm}|}
+\hline
+\textbf{Талбар} & \textbf{Тайлбар} \\
+\hline
+\endfirsthead
+
+\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- \textit{Үргэлжлэл}}}\\
+\hline
+\textbf{Талбар} & \textbf{Тайлбар} \\
+\hline
+\endhead
+
+\hline \multicolumn{2}{|r|}{\textit{Үргэлжлэл...}} \\
+\hline
+\endfoot
+
+\hline
+\endlastfoot
+
+\textbf{Use Case нэр} & Бараа материалын зарлага гаргах хүсэлт \\
+\hline
+\textbf{Зорилго (Goal)} & Эмийн сангаас эсвэл агуулахаас бараа зарлагдах хүсэлт гаргах \\
+\hline
+\textbf{Угтвар нөхцөл (Precondition)} & Системд амжилттай нэвтэрсэн байна \\
+\hline
+\textbf{Амжилттай төгсгөл (Success Condition)} & Хүсэлт амжилттай үүсэж, агуулахад хүргэгдэнэ \\
+\hline
+\textbf{Бүтэлгүйтлийн нөхцөл (Failure Condition)} & Бүтээгдэхүүн дутуу, санд бүртгэлгүй, системийн алдаа \\
+\hline
+\textbf{Үндсэн тоглогч (Primary Actor)} & Ажилтан (Портал хэрэглэгч) \\
+\hline
+\textbf{Үндсэн үйл явц (Main Flow)} & 1. "Барааны зарлага" хэсэг рүү орно.\newline 2. Зарлагдах бараа, тоо хэмжээ оруулна.\newline 3. "Хүсэлт илгээх" товч дарна.\newline 4. Хүсэлтийн төлөвийг хянаж үзнэ. \\
+\hline
+\textbf{Өргөтгөл (Extension)} & Байхгүй \\
+\hline
+\textbf{Хувилбарууд (Alternative Flow)} & Байхгүй \\
+\end{longtable}
+
+
+\section{Системийн архитектурын ерөнхий бүтэц}
+
+MW Portal систем нь Odoo ERP-ийн Enterprise орчинд портал хэрэглэгчийн оролцоог нэмэгдүүлэн, системийн нийт зардлыг оновчтой байлгах зорилготойгоор архитектурын зохион байгуулалт хийгдсэн. Архитектурын гол онцлог нь техникийн бүтцийг бизнесийн бодит хэрэглээтэй уялдуулсан, хөнгөн, өргөтгөгдөхүйц байхаас гадна аюулгүй байдал, найдвартай ажиллагааг хангахуйц байхаар төлөвлөгдсөнд оршино.
+
+\subsection{Архитектурын үндсэн санаа}
+
+Судалгааны явцад илэрсэн гол асуудал нь байгууллагууд ERP системийг нэвтрүүлэхдээ зөвхөн лицензтэй хэрэглэгчид дамжуулан системд хандах боломжтой тул шаардлагагүй лицензийн зардал үүсч, нэг хэрэглэгчийн эрхийг олон хүн хуваан ашиглах нөхцөл байдал үүсэж байв. Энэ нь audit trail, аюулгүй байдлын хувьд эрсдэлтэйгээс гадна системийн хэрэглээг буруу зуршил руу хөтөлдөг байна.
+
+Иймд архитектурын үндсэн шийдэл нь "Portal хэрэглэгч" нэртэй хязгаарлагдмал эрхтэй хэрэглэгчдийг тусгай интерфэйсээр холбож, зөвхөн тодорхой функцэд хандах боломж олгож, үндсэн ERP системийн ачаалал болон лицензийн өртгийг бууруулахад чиглэгдсэн юм.
+
+\subsection{Архитектурын бүтэц}
+
+Системийн бүтэц нь гурван үндсэн давхаргад хуваагдана. Үүнд:
+
+\begin{itemize}
+    \item Portal хэрэглэгчийн веб интерфэйс — Next.js дээр суурилсан орчин үеийн UI
+    \item MW API backend — Python, Odoo Framework ашигласан дунд түвшний логик
+    \item ERP системийн өгөгдлийн давхарга — Odoo-ийн model болон PostgreSQL өгөгдлийн сан
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\textwidth]{images/architecture.png}
+\caption{MW Portal системийн ерөнхий архитектур}
+\label{fig:mw_portal_architecture}
+\end{figure}
+
+Portal хэрэглэгч нь системд нэвтэрсний дараа өөрийн хариуцсан мэдээллийг илгээх, шалгах, хүсэлт гаргах зэрэг үйлдлийг UI–аар дамжуулан MW Backend API руу илгээдэг. API нь хэрэглэгчийн эрхийг шалгаж, Odoo-ийн дотоод бизнес логиктой харьцан мэдээллийг зохистойгоор дамжуулдаг.
+
+\subsection{Архитектурын дизайны шийдвэрүүд}
+\subsubsection{Portal хэрэглэгчийн эрхийн загвар}
+
+Portal хэрэглэгчид нь Odoo ERP-ийн \texttt{base.group\_portal} бүлэгт хамаарах бөгөөд зөвхөн өөрт хамаарах өгөгдлийг харах, шинээр үүсгэх зэрэг эрхтэй. Хандалтын хяналтыг \texttt{ir.model.access} болон \texttt{record rule}-ээр нарийн тогтоосон ба энэ нь дотоод өгөгдөл рүү зөвшөөрөлгүй хандалтаас сэргийлэх найдвартай аргачлал болдог.
+
+\subsubsection{UI ба API-н салангид бүтэц}
+
+Next.js ба React суурьтай UI нь ERP системийн дотоод интерфэйсээс бүрэн тусгаарлагдсан. Энэ нь хэрэглэгчийн туршлагыг хөнгөн, хурдан, тасралтгүй байлгахын зэрэгцээ, ачааллыг систем хооронд зохицуулж, аюулгүй байдлыг хангах нөхцөл бүрдүүлдэг. Backend талд custom логик бүхий Python код ашиглан ERP рүү дамжих хүсэлтүүдийг удирдана.
+
+\subsection{Судалгаанд тулгуурласан ажлын урсгал}
+
+Судалгаанд хамрагдсан байгууллагуудын хувьд портал хэрэглэгчид дараах төрлийн хүсэлт, мэдээллийг хамгийн өндөр давтамжтайгаар ERP-д илгээдэг болох нь ажиглагдсан. Тиймээс архитектурын загвар эдгээр урсгалыг дэмжих байдлаар тусгайлан төлөвлөгдсөн:
+
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\begin{longtable}{|c|P{4cm}|P{5cm}|P{4.5cm}|}
+\hline
+\textbf{№} & \textbf{Урсгалын нэр} & \textbf{API Endpoint} & \textbf{Odoo Модель} \\
+\hline
+\endfirsthead
+
+\multicolumn{4}{c}%
+{{\bfseries Хүснэгт \thetable\ - үргэлжлэл}} \\
+\hline
+\textbf{№} & \textbf{Урсгалын нэр} & \textbf{API Endpoint} & \textbf{Odoo Модель} \\
+\hline
+\endhead
+
+\hline \multicolumn{4}{|r|}{\textit{Үргэлжлэл...}} \\
+\hline
+\endfoot
+
+\hline
+\caption{Portal хэрэглэгчийн түгээмэл урсгалуудын API холболт ба Odoo модель} \\
+\endlastfoot
+
+1 & Ирц бүртгэх & /api/attendance/check\_in & hr.attendance \\
+\hline
+2 & Цагийн хүсэлт & /api/hr-leave/time-request & hr.leave.mw \\
+\hline
+3 & Худалдан авалт & /api/purchase-request/create & purchase.request \\
+\hline
+4 & Барааны шаардах & /api/product-expense/create & stock.product.other.expense \\
+\hline
+
+\end{longtable}
+
+Дээрх урсгал тус бүрт портал хэрэглэгч зөвхөн "create" (үүсгэх) үйлдлийг хийх ба эдгээр хүсэлт нь дотоод хэрэглэгч буюу менежерийн түвшинд батлагдан үргэлжилдэг.
+
+
+\section{Системийн архитектурын нарийвчилсан бүтэц}
+
+MW Portal систем нь олон давхаргат архитектурт суурилсан бөгөөд хэрэглэгчийн UI түвшнээс өгөгдлийн санд хүргэх бүхий л үйлдлийг тодорхой дараалал, дүрэм, хяналтын механизмаар боловсруулдаг. Энэхүү нарийвчилсан архитектур нь зөвхөн техникийн төдийгүй хэрэглээний онцлог, бизнесийн хэрэгцээ, мэдээллийн аюулгүй байдал зэргийг цогцоор нь хамарсан шийдэл юм.
+
+\subsection*{4.2 Sequence диаграмм ба бизнес урсгал}
+Системд хэрэглэгчээс ирэх үйлдэл бүр тодорхой дараалалтайгаар боловсруулагддаг бөгөөд үүнийг дараах диаграммуудаар тайлбарлана:
+
+\textbf{Чөлөөний хүсэлт үүсгэх урсгал:} Хэрэглэгч өөрийн shift болон төрлөөс хамаарсан чөлөөний хүсэлт илгээхэд, систем динамик flow-г шалгаж, тухайн ажилтантай холбоотой мэдээллийг Odoo моделуудаас цуглуулж, шинэ хүсэлт үүсгэдэг.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/arch_leave.png}
+    \caption{Чөлөөний хүсэлт үүсгэх урсгалын дарааллын диаграмм}
+    \label{fig:arch_leave}
+\end{figure}
+
+\textbf{Тайлбар:} Хэрэглэгчийн хүсэлтийн үеэр систем нь ажилтны мэдээллийг Employee модель дээр үндэслэн шүүж, зөвхөн тухайн ажилтанд хамаарах боломжит чөлөөний төрлийг харуулдаг.
+
+\textbf{Худалдан авалтын хүсэлт илгээх урсгал:} Portal хэрэглэгч байгууллагын салбар, агуулах зэргийг суурь параметр болгон ашиглан худалдан авалтын хүсэлт үүсгэж, тухайн хүсэлтийн мөр бүрийг Odoo модельд холбон бүртгэдэг.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/arch_purchase.png}
+    \caption{Худалдан авалтын хүсэлт үүсгэх урсгалын дарааллын диаграмм}
+    \label{fig:arch_purchase}
+\end{figure}
+
+\textbf{Тайлбар:} Хүсэлтийн мөр бүр өөрийн нэр төрөл, тоо хэмжээ, үнэ гэх мэт өгөгдлийг шүүлтүүрээр шалгаж, Purchase Request болон түүний мөрийн модельд (Lines) бүртгэгддэг.
+
+\textbf{Бараа материалын зардал үүсгэх урсгал:} Нэг төрлийн зардлыг олон төрлийн бүтээгдэхүүнээр илэрхийлж болох бөгөөд хэрэглэгчийн харьяа салбар, алба дээр үндэслэн тайлан үүсгэгдэнэ.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/arch_proexpense.png}
+    \caption{Бараа материалын зарлага үүсгэх урсгалын дарааллын диаграмм}
+    \label{fig:arch_proexpense}
+\end{figure}
+
+\textbf{Тайлбар:} Систем нь тухайн ажилтны хамааралтай салбарын мэдээллийг Employee модель дээр үндэслэн тодорхойлж, зарлагын бүртгэлийг үндсэн болон мөрийн түвшинд (expense + expense line) үүсгэн хадгалдаг.
+
+\subsection*{4.3 Өгөгдлийн урсгал ба шалгалтын процесс}
+Бүх API дуудлага дараах ерөнхий шалгалтын бүтэцтэй байна:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/arch_check_data.png}
+    \caption{Өгөгдлийн урсгал ба шалгалтын процессийн диаграмм}
+    \label{fig:arch_check_data}
+\end{figure}
+
+\textbf{Тайлбар:} Хэрэглэгчийн authentication (нэвтрэлтийн эрх), employee record шалгалт, өгөгдлийн форматын зөв эсэх зэргийг шат дараатай шалгаж, шаардлага хангаагүй тохиолдолд тодорхой алдааны хариу буцаадаг. Харин өгөгдөл зөв бол моделиудад мэдээлэл бүртгэгдэж, амжилттай хариу өгнө.
+
+\subsection*{4.4 Алдааны боловсруулалт}
+Систем нь алдааг ангилан бүртгэж, тодорхой HTTP кодоор хариу өгдөг. Энэ нь хөгжүүлэлт болон хэрэглэгчийн зүгээс асуудлыг илрүүлэхэд хялбар болгодог:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/arch_check_error.png}
+    \caption{Алдааны боловсруулалтын диаграмм}
+    \label{fig:arch_check_error}
+\end{figure}
+
+\textbf{Тайлбар:} Шалгалт бүрийн үе шатанд гарч болох authentication, validation, permission, database зэрэг төрлийн алдааг ялган боловсруулж, серверийн log бүртгэлд бүртгэнэ. Ингэснээр системийн хэвийн ажиллагаа болон аюулгүй байдлыг хангах нөхцөл бүрддэг.
+
+\singlespace
+\addcontentsline{toc}{part}{ЭХ СУРВАЛЖУУД (APA хэлбэрээр)}
+\begin{thebibliography}{}
+	% Ашигласан материалыг эндээс оруулна
+	\bibitem{odoo2024}
+	Odoo S.A. (2024). Odoo Enterprise Licensing Guide 18.0. Odoo Official Documentation. Retrieved from \url{https://www.odoo.com/documentation/18.0/legal/licenses.html}
+	\bibitem{monkwagner2023}
+	Monk, C., \& Wagner, T. (2023). Enterprise Resource Planning Systems: Concepts and Practice. Springer.
+	\bibitem{odoo18dev}
+	Odoo S.A. (2024). Odoo 18.0 Documentation — Developer: ORM and Architecture Overview. Odoo Official Documentation. Retrieved from \url{https://www.odoo.com/documentation/18.0/developer/tutorials/server_framework_101/01_architecture.html}
+	\bibitem{odoo18security}
+	Odoo S.A. (2024). Odoo 18.0 Developer Documentation — Security, Access Rules, and Record Rules. Odoo Official Documentation. Retrieved from \url{https://www.odoo.com/documentation/18.0/developer/reference/backend/security.html}
+	\bibitem{ventortech}
+	Ventor. (n.d.). Odoo Pricing. Retrieved from \url{https://ventor.tech/odoo-pricing/}
+	\bibitem{sandhu1996rbac}
+	Sandhu, R., Coyne, E. J., Feinstein, H. L., \& Youman, C. E. (1996). Role-based access control models. IEEE Computer, 29(2), 38–47.
+	\bibitem{owaspasvs}
+	OWASP Foundation. (2023). OWASP Application Security Verification Standard 4.0.3. Retrieved from \url{https://owasp.org/www-project-application-security-verification-standard/}
+	\bibitem{polskaya2023}
+	Polskaya, I., \& Puntus, V. (2023). Odoo Enterprise лицензийн үнэ ба зардлыг бууруулах арга зам. VentorTech Blog. Retrieved from \url{https://ventor.tech/odoo/odoo-enterprise-license-pricing-and-how-to-reduce-cost/}
+	\bibitem{odoo19terms}
+	Odoo S.A. (2025). Odoo Enterprise захиалгын гэрээ (Үйлчилгээний нөхцөл, хувилбар 11). Odoo 19.0 Documentation. Retrieved from \url{https://www.odoo.com/documentation/19.0/legal/terms/enterprise.html}
+	\bibitem{cudio2025}
+	Cudio. (2025). Odoo ERP нэвтрүүлэлтийн зардал: Үнэ, далд зардал ба төсвийн зөвлөмж. Cudio Tech Blog. Retrieved from \url{https://www.cudio.com/blogs/odoo-erp-implementation}
+\end{thebibliography}
+
+\appendix
+\addcontentsline{toc}{part}{ХАВСРАЛТ}
+
+\chapter{Судалгааны хүснэгт, лицензийн харьцуулалт}
+Хавсралтын агуулга
+
+\chapter{Odoo access rule жишээ}
+Хавсралтын агуулга
+
+\chapter{Portal controller-ийн кодын хэсэг (жишээ хэлбэрээр)}
+Хавсралтын агуулга
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{images/user_portal_use_case.png}
+\caption{Портал хэрэглэгчийн use case — хүсэлт илгээх ба дотоод урсгалтай уялдах жишээ}
+\label{fig:portal-use-case}
+\end{figure}
+
+\begin{itemize}
+    \item \texttt{models/} — өгөгдлийн бүтэц, бизнес логик
+    \item \texttt{views/} — хэрэглэгчийн интерфэйс
+    \item \texttt{controllers/} — API болон веб хүсэлт
+    \item \texttt{security/} — хэрэглэгчийн эрх ба хандалтын дүрэм
+\end{itemize} 
+
+\end{document}
