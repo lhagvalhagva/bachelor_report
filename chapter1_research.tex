@@ -1,0 +1,302 @@
+\chapter{Судалгаа ба Онолын Үндэс}
+\section{ERP системийн тухай ерөнхий ойлголт}
+Enterprise Resource Planning (ERP) систем нь байгууллагын нэгдсэн нөөцийн удирдлагын цогц шийдэл бөгөөд байгууллагын санхүү, нягтлан бодох бүртгэл, борлуулалт, худалдан авалт, агуулах, үйлдвэрлэл, хүний нөөц зэрэг үндсэн бизнесийн үйл ажиллагааг нэг мэдээллийн системд уялдуулан нэгтгэдэг программ хангамж юм. ERP системийн гол зорилго нь мэдээллийн давхардлыг арилгах, шийдвэр гаргалтыг хурдасгах, байгууллагын нөөцийн оновчтой хуваарилалт хийхэд оршино.
+  
+ERP системүүд нь ихэвчлэн модульчлагдсан бүтэцтэй байдаг бөгөөд байгууллага өөрийн хэрэгцээ, үйл ажиллагааны онцлогоос хамаарч санхүү, хүний нөөц, бараа материалын менежмент, борлуулалт, хэрэглэгчийн харилцааны менежмент (CRM) зэрэг модулиудыг сонгон ашигладаг. Модуль тус бүр нь байгууллагын дотоод процессын нэг хэсгийг удирдах бөгөөд эдгээр модулиуд хоорондоо нэг өгөгдлийн сантай, бодит цагийн уялдаатай байдлаар ажилладаг.
+
+ERP системийн хамгийн чухал онцлог нь нэгдсэн өгөгдлийн сан юм. Өгөгдөл нэг л газарт хадгалагдаж, бүх модуль, хэлтэс, хэрэглэгчид ижил мэдээлэлд хандах боломжтой тул мэдээллийн зөрүү, давхардал, алдааны эрсдэл багасдаг. Энэ нь байгууллагын шийдвэр гаргалтын чанарыг сайжруулах, менежментийн түвшинд ил тод байдлыг нэмэгдүүлэхэд чухал ач холбогдолтой.
+  
+ERP системүүдийг арилжааны (proprietary) болон нээлттэй эхийн (open-source) гэсэн хоёр үндсэн төрөлд ангилдаг. Арилжааны ERP системд SAP ERP, Oracle ERP Cloud, Microsoft Dynamics 365 зэрэг томоохон төлөөллүүд ордог бөгөөд эдгээр нь лицензийн төлбөр, дэмжлэгийн зардал өндөр байдаг. Харин нээлттэй эхийн ERP системүүд болох Odoo, ERPNext, Dolibarr, Tryton зэрэг нь програмчлалын код нээлттэй, байгууллагын хэрэгцээнд тохируулан өөрчлөх боломжтой байдгаараа давуу талтай.
+
+Сүүлийн жилүүдэд олон улсын байгууллагууд ERP системийг Software-as-a-Service (SaaS) хэлбэрээр ашиглах хандлагатай болж байна. Энэ тохиолдолд байгууллага ERP системийг үүлэн (cloud) орчинд байршуулж, хэрэглэгч тус бүрийн лицензийн төлбөрөөр ашигладаг. Гэвч энэ хэлбэрийн сул тал нь байгууллагын хэмжээнээс хамаарч лицензийн зардал өндөрсөх, мөн бүх хэрэглэгчдэд бүрэн эрх олгох шаардлага үүсдэг.
+
+Ийм нөхцөлд байгууллагууд ERP системийн үр ашгийг нэмэгдүүлэхийн тулд хэрэглэгчийн хандалтын түвшинг оновчтой тогтоох, шаардлагатай тохиолдолд Portal буюу хөнгөн хэрэглэгчийн орчныг ашиглах замаар лицензийн зардлыг бууруулах стратегийг хэрэгжүүлж байна.
+
+\section{Odoo ERP системийн бүтэц ба архитектур}
+
+Odoo ERP нь байгууллагын бизнесийн процессуудыг автоматжуулах, нэгдсэн мэдээллийн урсгал бий болгох зорилготой модульчлагдсан, гурван шатлалт архитектуртай (Model–View–Controller) систем юм \cite{odoo2024}.
+
+\textbf{Model буюу бизнес логикийн түвшин}
+
+Model түвшин нь системийн гол цөм бөгөөд өгөгдлийн бүтэц, бизнесийн дүрэм, харилцан хамаарлыг тодорхойлдог. Odoo нь Python хэл дээр бичигдсэн ORM (Object Relational Mapping) системийг ашигладаг бөгөөд өгөгдлийн санд хийгдэх бүх үйлдэл (CREATE, READ, UPDATE, DELETE) нь ORM-оор дамждаг.
+
+ORM нь PostgreSQL өгөгдлийн сантай нягт уялдаа бүхий тул өгөгдлийг SQL хэл бичихгүйгээр Python кодоор удирдах боломжийг олгодог.
+Жишээлбэл, \texttt{models.Model}-ийг өргөтгөн тодорхойлсон класс бүр нь өгөгдлийн сангийн нэг хүснэгттэй шууд харгалздаг.
+
+\textbf{Хүснэгтийн уялдаа холбоо (Relationships)}
+
+Odoo-ийн ORM нь өгөгдлийн хоорондын харилцан хамаарлыг гурван үндсэн төрлөөр тодорхойлдог бөгөөд эдгээр нь \texttt{many2one}, \texttt{one2many}, \texttt{many2many} талбаруудаар илэрхийлэгддэг.
+
+\begin{itemize}
+    \item \texttt{many2one} — Нэг хүснэгтийн бичлэгийг нөгөө хүснэгтийн нэг бичлэгтэй холбох хамаарал.
+    Жишээлбэл, \texttt{hr.employee} модель нь "\texttt{department\_id = fields.Many2one('hr.department')} гэж тодорхойлогдсон бол тухайн ажилтан нэг л хэлтэст харьяалагдана.
+    \item \texttt{one2many} — Нэг бичлэгийг олон бичлэгтэй холбох хамаарал.
+    Жишээ нь, \texttt{hr.department} моделийн \texttt{employee\_ids = fields.One2many('hr.employee', 'department\_id')} гэж тодорхойлогдвол тухайн хэлтэст олон ажилтан хамаарна.
+    \item \texttt{many2many} — Хоёр хүснэгтийн хооронд олон-олон харилцаа үүсгэх.
+    Жишээлбэл, \texttt{res.users} ба \texttt{res.groups} хоорондын хамаарал: нэг хэрэглэгч олон \texttt{group}-д харьяалагдаж, нэг \texttt{group} олон хэрэглэгч агуулж болно.
+\end{itemize}
+
+Эдгээр хамаарлууд нь өгөгдлийн логик уялдаа, бүтцийн нэгтгэл, мэдээллийн дахин ашиглалт-ыг хангадаг бөгөөд Odoo ERP системийн модуль хоорондын холболтын үндэс болдог.
+
+\textbf{View буюу хэрэглэгчийн интерфэйсийн түвшин}
+
+View түвшин нь хэрэглэгчийн системтэй харилцах интерфэйс бөгөөд XML хэл дээр тодорхойлогддог. Хэрэглэгчийн харагдац (жагсаалт, форм, канбан, календар, график) нь Odoo-ийн QWeb болон OWL (Odoo Web Library) фреймворкуудаар дамжин рэндэрлэгддэг.
+
+View нь бизнесийн өгөгдлийг ойлгомжтой байдлаар үзүүлэхээс гадна role-based (эрхийн түвшин хамаарах) харагдацын ялгааг дэмждэг. Жишээлбэл, Portal хэрэглэгч зөвхөн өөрийн хүсэлтийн мэдээллийг, харин дотоод ажилтан бүх хэлтсийн өгөгдлийг харах эрхтэй байж болно.
+
+\textbf{Controller буюу удирдлагын түвшин}
+
+Controller нь HTTP хүсэлт болон системийн өгөгдлийн түвшний логикийг холбодог дундын давхарга юм. \texttt{@http.route} декоратор ашиглан хүсэлтийн зам, зөвшөөрлийн түвшин (\texttt{auth='user'}, \texttt{auth='portal'}, \texttt{auth='public'}) болон хүсэлтийн төрлийг (GET, POST) тодорхойлдог.
+
+Controller нь веб эсвэл API орчны (жишээ нь React, Next.js) хүсэлтийг хүлээн авч, ORM руу чиглүүлж, JSON эсвэл HTTP хариу буцаадаг. Энэ механизм нь Portal хэрэглэгчийн орчны үндэс болж, Enterprise лицензгүй хэрэглэгчдэд хязгаарлагдмал CRUD үйлдэл хийх боломжийг олгодог.
+
+\textbf{Модульчлагдсан бүтэц ба өргөтгөх боломж}
+
+Odoo нь бүрэн модульчлагдсан систем бөгөөд модуль бүр тодорхой бизнесийн үйл ажиллагааг хариуцдаг.
+Жишээлбэл:
+
+\begin{itemize}
+    \item \texttt{hr} — хүний нөөцийн бүртгэл
+    \item \texttt{purchase} — худалдан авалт
+    \item \texttt{account} — санхүүгийн бүртгэл
+    \item \texttt{portal} — хязгаарлагдмал хэрэглэгчийн орчин
+\end{itemize}
+
+Модуль бүр дараах бүрэлдэхүүнүүдтэй байна:
+\begin{figure}[H]
+    \centering
+        \includegraphics[width=0.5\textwidth]{images/module_butests.png}
+        \caption{Odoo ERP модулийн бүтэц}
+        \label{fig:odoo_module_structure}
+    \end{figure}
+
+\begin{itemize}
+    \item \texttt{models/} — өгөгдлийн бүтэц, бизнес логик
+    \item \texttt{views/} — хэрэглэгчийн интерфэйс
+    \item \texttt{controllers/} — API болон веб хүсэлт
+    \item \texttt{security/} — хэрэглэгчийн эрх ба хандалтын дүрэм
+\end{itemize} 
+
+Энэхүү модульчлагдсан зохион байгуулалт нь системийг уян хатан, өргөтгөхөд хялбар болгож, байгууллагын өөрчлөлтөд дасан зохицох чадварыг нэмэгдүүлдэг.
+
+\textbf{Техникийн орчин ба холболтын давхарга}
+
+Odoo ERP нь серверийн талд Python, өгөгдлийн талд PostgreSQL, веб серверийн хувьд Nginx эсвэл Odoo-ийн дотоод HTTP серверийг ашигладаг. Хэрэглэгчийн хүсэлт нь HTTP эсвэл JSON-RPC протоколоор Controller түвшинд ирж боловсруулагдана.
+
+Үйлдвэрлэлийн орчинд (production environment) олон worker бүхий архитектур, Redis кэш, longpolling үйлчилгээ ашиглан системийн гүйцэтгэл, найдвартай байдлыг хангадаг.
+
+\section{Portal ба Controller}
+
+\textbf{Ерөнхий ойлголт}
+
+Odoo ERP системийн Portal нь байгууллагын дотоод мэдээллийн системийг хөнгөн хэрэглэгчийн орчинд нээх юм.
+Энэ нь байгууллагын гадаад болон дотоод хэрэглэгчдэд (жишээлбэл: харилцагч, нийлүүлэгч, ажилтан) Enterprise лиценз шаардахгүйгээр тодорхой өгөгдөлд хандах, хүсэлт илгээх боломжийг олгодог.
+
+Portal нь \texttt{share} хэрэглэгчийн эрхийн загварт тулгуурладаг бөгөөд \texttt{res.users} моделийн түвшинд \texttt{share=True} шинж чанараар ялгагдана. Энэ нь системийн "Internal User" төрлийн хэрэглэгчдээс ялгаатай, лицензийн тоонд хамаардаггүй боловч хэрэглэгчийн баталгаажсан (authenticated) төлөвт ажилладаг \cite{odoo2024}.
+
+\textbf{Portal механизмийн бүтэц ба үүрэг}
+
+Odoo ERP системийн Portal орчин нь дараах гурван гол бүрэлдэхүүнээс бүрддэг:
+\begin{itemize}
+    \item \textbf{Portal User (\texttt{res.users.share=True})} — лицензгүй, портал хэлбэрийн хэрэглэгч.
+    Тухайн хэрэглэгч "Portal" бүлэгт (\texttt{base.group\_portal}) харьяалагдах бөгөөд зөвхөн өөрийн мэдээлэлд хандах хязгаарлалттай байдаг.
+    \item \textbf{Portal Controller (Backend Layer)} — серверийн талын хяналтын давхарга бөгөөд хэрэглэгчийн хүсэлтүүдийг хүлээн авч, шалгаж, Model түвшний өгөгдөлтэй харьцан, JSON хариу буцаадаг.
+    \item \textbf{Portal Interface (Frontend Layer – Next.js)} — орчин үеийн веб хэрэглэгчийн интерфэйс бөгөөд Odoo backend-тэй REST эсвэл JSON-RPC протоколоор холбогдон өгөгдлийг үзүүлэх, шинэчлэх, илгээх боломжийг олгодог.
+\end{itemize}
+
+Энэхүү бүтэц нь Odoo-ийн уламжлалт QWeb portal-ыг орчин үеийн вэб технологитой (React / Next.js) уялдуулсан илүү уян хатан архитектур бий болгож байгаа юм.
+
+\textbf{Portal Controller-ийн архитектур}
+
+Odoo 18.0 хувилбарт Controller давхарга нь \texttt{odoo.http.Controller} дээр суурилдаг бөгөөд HTTP хүсэлт болон JSON RPC хүсэлтийг хүлээн авч, бизнес логик (Model)-д хандалт хийнэ.
+
+\begin{lstlisting}[language=Python, caption=Portal Controller-ийн жишээ]
+from odoo import http
+from odoo.http import request
+
+class PortalLeaveController(http.Controller):
+    @http.route('/api/hr-leave/request', type='json', auth='user', methods=['POST'], csrf=False)
+    def create_time_request(self, **kwargs):
+        user = request.env.user
+        if not user.has_group('base.group_portal'):
+            return {'error': 'Access denied'}
+        employee = request.env['hr.employee'].sudo().search([('user_id', '=', user.id)], limit=1)
+        if not employee:
+            return {'error': 'Employee not found'}
+        leave = request.env['hr.leave'].sudo().create({
+            'employee_id': employee.id,
+            'name': kwargs.get('description'),
+            'request_date_from': kwargs.get('date_from'),
+            'request_date_to': kwargs.get('date_to'),
+        })
+        return {'success': True, 'leave_id': leave.id}
+\end{lstlisting}
+
+Энд \texttt{auth='user'} параметр ашиглагдаж байгаа нь портал хэрэглэгчийг баталгаажсан хэрэглэгчийн түвшинд шалгах бөгөөд дараа нь тухайн хэрэглэгч \texttt{base.group\_portal} бүлэгт багтсан эсэхийг шалгаж байна.
+
+Ийм байдлаар \texttt{auth='portal'} гэх тусдаа төрөл шаардлагагүй болсон бөгөөд энэ нь Odoo 16+ хувилбаруудад authentication загвар шинэчлэгдсэнтэй холбоотой юм \cite{odoo18dev}.
+
+\textbf{Portal ба Next.js интерфэйсийн уялдаа}
+
+Next.js суурьтай портал интерфэйс нь Odoo-ийн backend API-д холбогдон хэрэглэгчийн өгөгдөлтэй харьцдаг.
+Хэрэглэгчийн талын (frontend) архитектур дараах дарааллаар ажиллана:
+\begin{itemize}
+    \item \textbf{Login / Session Authentication}
+    Хэрэглэгч нэвтэрсний дараа серверээс cookie эсвэл токен хүлээн авна.
+    \item \textbf{API хүсэлт илгээх}
+    Next.js талд \texttt{fetch} эсвэл \texttt{axios} ашиглан \texttt{/api/...} маршрут руу хүсэлт илгээнэ.
+    \item \textbf{Backend Controller хүлээн авах}
+    Controller нь \texttt{auth='user'} authentication шалгалт хийж, portal хэрэглэгч мөн эсэхийг \texttt{group} болон \texttt{record rule}-аар баталгаажуулна.
+    \item \textbf{Model interaction}
+    Controller нь \texttt{request.env['model.name']} ашиглан бизнес логиктой харьцана.
+    \item \textbf{Response буцаах}
+    Controller нь JSON хэлбэрээр хариу өгч, Next.js UI хэсэгт шинэчилнэ.
+\end{itemize}
+
+\begin{lstlisting}[language=JavaScript, caption=Next.js талын API хүсэлтийн жишээ]
+  await fetch("http://localhost:2050/api/hr-leave/request", {
+    method: "POST",
+      credentials: "include",
+    headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ date_from: "2025-10-16", date_to: "2025-10-17", description: "Leave Request" })
+  });
+\end{lstlisting}
+
+Энэхүү архитектур нь Odoo ERP системийг илүү API-центрик, фронтенд технологид нээлттэй болгож, хэрэглэгчийн туршлагыг сайжруулна.
+
+\textbf{Аюулгүй байдлын давхарга}
+
+Portal хэрэглэгчид системийн өгөгдөлд хандахдаа дараах олон давхар шалгалттай байдаг:
+\begin{itemize}
+    \item \textbf{Authentication Layer:} \texttt{auth='user'} ашиглан session эсвэл токеноор баталгаажуулна.
+    \item \textbf{Authorization Layer:} \texttt{user.has\_group('base.group\_portal')} шалгалт хийж зөвшөөрөгдсөн хэрэглэгчийг ялгана.
+    \item \textbf{Access Control Layer:} \texttt{ir.model.access.csv} болон \texttt{ir.rule} файлуудаар тухайн хэрэглэгч зөвхөн өөрийн өгөгдөлд хандахыг баталгаажуулна.
+\end{itemize}
+
+Ингэснээр portal хэрэглэгч системийн мэдээлэлд бүрэн хандахгүй боловч, өөрийн ажилтай холбоотой процессууд (цагийн хүсэлт, худалдан авалт, ирц бүртгэл гэх мэт) гүйцэтгэх боломжтой болдог.
+Эцэст нь portal болон Controller-ийн нэгдсэн механизм нь Odoo ERP системийн архитектурт нээлттэй, хөнгөн, өргөтгөх боломжтой давхарга бий болгодог.
+
+\section{Хандалтын эрхийн загвар(ir.model.access, ir.rule)}
+
+\textbf{Ерөнхий ойлголт}
+
+Odoo ERP систем нь өндөр түвшний эрхийн удирдлагын (Access Control) механизмаар дамжуулан хэрэглэгчдийн өгөгдөлд хандах эрхийг нарийн хянадаг. Энэхүү эрхийн бүтэц нь хоёр үндсэн түвшинд хийгддэг:
+\begin{itemize}
+    \item \textbf{Model access rule (\texttt{ir.model.access.csv})} — хэрэглэгч тухайн модельд унших (read), бичих (write), үүсгэх (create), устгах (unlink) үйлдэл хийх эрхтэй эсэхийг хянадаг.
+    \item \textbf{Record rule (\texttt{ir.rule})} — тухайн модель доторх аль бичлэгүүдэд (records) хэрэглэгч хандаж болохыг тодорхойлдог.
+\end{itemize}
+
+Эдгээр нь Odoo ERP системийн security layer-ийн гол бүрэлдэхүүн бөгөөд portal хэрэглэгч системийн бизнес логик руу хязгаарлагдмал байдлаар хандах нөхцөл бүрдүүлдэг.
+
+\textbf{Онолын суурь: RBAC}
+
+Odoo-ийн эрхийн загвар нь үндсэндээ рольд суурилсан хандалтын удирдлага (RBAC) загварыг хэрэгжүүлдэг. RBAC нь хэрэглэгчдийг бүлэг/рольд хуваан, тухайн рольд оноосон эрхээр дамжуулан нөөцөд хандахыг зөвшөөрдөг \cite{sandhu1996rbac}. \texttt{res.groups} (роль), \texttt{ir.model.access} (модель түвшний эрх), \texttt{ir.rule} (бичлэгийн түвшний домэйн) гурвын нэгдэл нь Odoo дахь RBAC-ийн практик хэрэгжилт болж, портал хэрэглэгчдэд "зөвхөн өөрийнх"-ийг харах, "зөвшөөрсөн талбар"-т л үйлдэх зэрэг хязгаарлалтыг баталгаажуулна.
+
+\textbf{Portal хэрэглэгчийн хандалтын хязгаарлалт}
+
+Portal хэрэглэгч нь \texttt{share=True} шинжтэй хэрэглэгчийн төрөл бөгөөд системийн "Internal User" төрлийн хэрэглэгчтэй харьцуулахад модель руу шууд хандах эрхгүй байдаг.
+Тодруулбал, portal хэрэглэгч Controller ашиглан REST API эсвэл JSON RPC замаар хүсэлт илгээсэн ч:
+\begin{itemize}
+    \item Тухайн model дээр \texttt{group\_portal} эсвэл түүнтэй холбогдох access rule байхгүй бол \texttt{AccessError} алдаа гарна.
+    \item Portal хэрэглэгчийн \texttt{user\_id} нь "\texttt{base.group\_user}" бүлэгт хамаарахгүй тул default security rule-үүд түүнд үйлчилдэггүй.
+\end{itemize}
+
+Иймд portal хэрэглэгчдэд зориулсан тусгай модель түвшний хандалтын файл (\texttt{ir.model.access.csv}) болон record rule (\texttt{security.xml}) зайлшгүй шаардлагатай байдаг.
+
+\textbf{Model Access Rule (\texttt{ir.model.access.csv})}
+
+\texttt{ir.model.access.csv} файл нь Odoo модулийн root түвшинд байрлах бөгөөд тухайн модульд ямар бүлгийн хэрэглэгч ямар модельд хандах эрхтэйг тодорхойлдог.
+
+Жишээ (Portal хэрэглэгчийн хандалт үүсгэх):
+\begin{lstlisting}[language=, caption=ir.model.access.csv жишээ]
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_leave_portal,hr.leave,hr_holidays.model_hr_leave,base.group_portal,1,1,1,0
+\end{lstlisting}
+
+Энэхүү тохиргоо нь:
+\begin{itemize}
+    \item \texttt{hr.leave} моделийн хувьд портал хэрэглэгчид унших, бичих, үүсгэх (create) эрхийг олгоно,
+    \item устгах (unlink) эрхийг хориглоно.
+\end{itemize}
+
+Ингэснээр Portal Controller нь \texttt{request.env['hr.leave'].sudo()} гэх мэтээр тухайн моделийг дуудахад эрхийн алдаа үүсэхгүйгээр ажиллах боломжтой болно.
+
+\textbf{Record Rule (\texttt{ir.rule})}
+
+Model access rule нь хэрэглэгч тухайн модельд ямар төрлийн үйлдэл хийж болохыг хязгаарладаг бол record rule нь ямар бичлэгүүдэд (rows) хандаж болохыг тодорхойлдог.
+
+Жишээ (Portal хэрэглэгч зөвхөн өөрийн бичлэгт хандах):
+\begin{lstlisting}[language=xml, caption=ir.rule XML жишээ]
+<record id="rule_hr_leave_portal_own" model="ir.rule">
+    <field name="name">Portal: Own Leave Only</field>
+    <field name="model_id" ref="hr_holidays.model_hr_leave"/>
+    <field name="groups" eval="[(4, ref('base.group_portal'))]"/>
+    <field name="domain_force">[('employee_id.user_id', '=', user.id)]</field>
+</record>
+\end{lstlisting}
+
+Энэ нь дараах нөхцөлийг үүсгэнэ:
+\begin{itemize}
+    \item Portal хэрэглэгч зөвхөн өөрийн \texttt{employee\_id}-тай холбоотой чөлөөний хүсэлтүүдийг (\texttt{hr.leave}) харах, шинэчлэх эрхтэй.
+    \item Бусад ажилтны өгөгдөл рүү хандах боломжийг \texttt{domain\_force} нөхцлөөр бүрэн хориглоно.
+\end{itemize}
+
+\textbf{Controller ба Access Rule-ийн уялдаа}
+
+Portal Controller нь HTTP түвшинд хэрэглэгчийн хүсэлтийг хүлээн авч, тухайн хэрэглэгчийн environment (\texttt{request.env})-ээр дамжуулан model-т ханддаг.
+Хэрэв portal хэрэглэгчийн хувьд тухайн model-д access line байхгүй бол:
+
+\texttt{AccessError: The requested operation cannot be completed due to security restrictions.}
+
+гэсэн алдаа буцна.
+
+Иймд controller зөв ажиллахын тулд portal хэрэглэгчийн эрхийн түвшинд:
+\begin{itemize}
+    \item \texttt{ir.model.access.csv} – хэрэглэгчид model руу нэвтрэх үндсэн эрх олгох;
+    \item \texttt{ir.rule} – тухайн хэрэглэгчийн бичлэгийг хязгаарлах нөхцөл (жишээлбэл \texttt{user\_id = user.id}) заах;
+\end{itemize}
+гэсэн хоёр давхар тохиргоо шаардлагатай байдаг.
+
+\textbf{Практик жишээ}
+
+Portal Controller кодын хэсэг:
+\begin{lstlisting}[language=Python, caption=Практик Controller кодын жишээ]
+@http.route('/api/hr-leave/request', type='json', auth='user', methods=['POST'], csrf=False)
+def create_time_request(self, **kwargs):
+    user = request.env.user
+    if not user.has_group('base.group_portal'):
+        return {'error': 'Access denied'}
+
+    leave = request.env['hr.leave'].sudo().create({
+        'employee_id': request.env['hr.employee'].sudo().search([('user_id', '=', user.id)], limit=1).id,
+        'name': kwargs.get('description'),
+        'request_date_from': kwargs.get('date_from'),
+        'request_date_to': kwargs.get('date_to'),
+    })
+    return {'success': True, 'leave_id': leave.id}
+\end{lstlisting}
+
+Энэ controller зөв ажиллахын тулд дараах security файлууд шаардлагатай:
+\begin{itemize}
+    \item \texttt{ir.model.access.csv} — \texttt{base.group\_portal} \texttt{group}-д \texttt{hr.leave} \texttt{model}-д CRUD хандалт олгох,
+    \item \texttt{ir.rule} — зөвхөн тухайн хэрэглэгчийн (\texttt{user.id}) бичлэгүүдэд хандах нөхцөл үүсгэх.
+\end{itemize}
+
+\textbf{Дүгнэлт}
+
+Хандалтын эрхийн загвар нь Odoo ERP системийн security layer-ийн хамгийн чухал хэсэг юм.
+Portal хэрэглэгч Controller ашиглан API түвшинд model-т хандах үед, түүний эрх нь:
+\begin{itemize}
+    \item \texttt{ir.model.access.csv} – үйлдлийн түвшин,
+    \item \texttt{ir.rule} – бичлэгийн түвшин,
+\end{itemize}
+гэсэн хоёр түвшинд хянагддаг.
+
+Ингэснээр:
+\begin{itemize}
+    \item Portal хэрэглэгч Enterprise лицензгүйгээр тодорхой model-д хандалт хийж чадна,
+    \item Мэдээллийн аюулгүй байдал хангагдана,
+    \item Controller түвшинд эрхийн алдаа үүсэхгүйгээр CRUD үйлдэл гүйцэтгэх боломж бүрдэнэ.
+\end{itemize}
+
+Энэ шийдэл нь Portal механизмыг Enterprise лицензтэй системд зардал багатай, хөнгөн хувилбараар ашиглах түлхүүр шийдэл болдог.

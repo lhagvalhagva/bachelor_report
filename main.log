@@ -1,0 +1,3075 @@
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025/Homebrew) (preloaded format=xelatex 2025.3.15)  2 NOV 2025 19:36
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**main.tex
+(./main.tex
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+(./preamble.tex
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/base/report
+.cls
+Document Class: report 2024/06/29 v1.4n Standard LaTeX document class
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/base/size12
+.clo
+File: size12.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count192
+\c@chapter=\count193
+\c@section=\count194
+\c@subsection=\count195
+\c@subsubsection=\count196
+\c@paragraph=\count197
+\c@subparagraph=\count198
+\c@figure=\count199
+\c@table=\count266
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen141
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/fontspec/fo
+ntspec.sty
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/l3packages/
+xparse/xparse.sty
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/l3kernel/ex
+pl3.sty
+Package: expl3 2025-01-18 L3 programming layer (loader) 
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/l3backend/l
+3backend-xetex.def
+File: l3backend-xetex.def 2024-05-08 L3 backend support: XeTeX
+\g__graphics_track_int=\count267
+\l__pdf_internal_box=\box52
+\g__pdf_backend_annotation_int=\count268
+\g__pdf_backend_link_int=\count269
+))
+Package: xparse 2024-08-16 L3 Experimental document command parser
+)
+Package: fontspec 2024/05/11 v2.9e Font selection for XeLaTeX and LuaLaTeX
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/fontspec/fo
+ntspec-xetex.sty
+Package: fontspec-xetex 2024/05/11 v2.9e Font selection for XeLaTeX and LuaLaTe
+X
+\l__fontspec_script_int=\count270
+\l__fontspec_language_int=\count271
+\l__fontspec_strnum_int=\count272
+\l__fontspec_tmp_int=\count273
+\l__fontspec_tmpa_int=\count274
+\l__fontspec_tmpb_int=\count275
+\l__fontspec_tmpc_int=\count276
+\l__fontspec_em_int=\count277
+\l__fontspec_emdef_int=\count278
+\l__fontspec_strong_int=\count279
+\l__fontspec_strongdef_int=\count280
+\l__fontspec_tmpa_dim=\dimen142
+\l__fontspec_tmpb_dim=\dimen143
+\l__fontspec_tmpc_dim=\dimen144
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/base/fonten
+c.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/fontspec/fo
+ntspec.cfg)))
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/xelatex/xltxtra/x
+ltxtra.sty
+Package: xltxtra 2018/12/31 v0.7 Improvements for the "XeLaTeX" format
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/generic/iftex/ifl
+uatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/generic/iftex/ift
+ex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+))
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/generic/iftex/ifx
+etex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/realscripts
+/realscripts.sty
+Package: realscripts 2016/02/13 v0.3d Access OpenType subscripts and superscrip
+ts
+\subsupersep=\dimen145
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/metalogo/me
+talogo.sty
+Package: metalogo 2010/05/29 v0.12 Extended TeX logo macros
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/graphics/gr
+aphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/graphics/ke
+yval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/graphics/gr
+aphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/graphics/tr
+ig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/graphics-cf
+g/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 106.
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/graphics-de
+f/xetex.def
+File: xetex.def 2022/09/22 v5.0n Graphics/color driver for xetex
+))
+\Gin@req@height=\dimen146
+\Gin@req@width=\dimen147
+)
+\xl@everylogo=\toks18
+\xl@@everylogo=\toks19
+LaTeX Info: Redefining \TeX on input line 193.
+LaTeX Info: Redefining \LaTeX on input line 202.
+LaTeX Info: Redefining \LaTeXe on input line 219.
+)
+\l__xetex_show_hyphens_wrapping_box=\box53
+\l__xetex_show_hyphens_temp_box=\box54
+\l__xetex_show_hyphens_final_box=\box55
+\g__xetex_show_hyphens_word_box=\box56
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/xelatex/xunicode/
+xunicode.sty
+File: xunicode.sty 2011/09/09 v0.981 provides access to latin accents and many 
+other characters in Unicode lower plane
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/tipa/t3enc.
+def
+File: t3enc.def 2001/12/31 T3 encoding
+)
+\tipaTiiicode=\count281
+\tipasavetokens=\toks20
+\tipachecktokens=\toks21
+)
+
+Package fontspec Info: 
+(fontspec)             Font family 'TimesNewRoman(0)' created for font 'Times
+(fontspec)             New Roman' with options [Ligatures=TeX,Ligatures=TeX].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Times New
+(fontspec)             Roman/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Times New
+(fontspec)             Roman/B/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"Times New
+(fontspec)             Roman/I/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Times New
+(fontspec)             Roman/BI/OT:script=latn;language=dflt;mapping=tex-text;"
+
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'Arial(0)' created for font 'Arial' with
+(fontspec)             options [Ligatures=TeX].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"Arial/OT:script=latn;language=dflt;mapping=tex-text;
+"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"Arial/B/OT:script=latn;language=dflt;mapping=tex-tex
+t;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"Arial/I/OT:script=latn;language=dflt;mapping=tex-tex
+t;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"Arial/BI/OT:script=latn;language=dflt;mapping=tex-te
+xt;"
+
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/geometry/ge
+ometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/generic/iftex/ifv
+tex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count282
+\Gm@cntv=\count283
+\c@Gm@tempcnt=\count284
+\Gm@bindingoffset=\dimen148
+\Gm@wd@mp=\dimen149
+\Gm@odd@mp=\dimen150
+\Gm@even@mp=\dimen151
+\Gm@layoutwidth=\dimen152
+\Gm@layoutheight=\dimen153
+\Gm@layouthoffset=\dimen154
+\Gm@layoutvoffset=\dimen155
+\Gm@dimlist=\toks22
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/fancyhdr/fa
+ncyhdr.sty
+Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
+
+\f@nch@headwidth=\skip51
+\f@nch@offset@elh=\skip52
+\f@nch@offset@erh=\skip53
+\f@nch@offset@olh=\skip54
+\f@nch@offset@orh=\skip55
+\f@nch@offset@elf=\skip56
+\f@nch@offset@erf=\skip57
+\f@nch@offset@olf=\skip58
+\f@nch@offset@orf=\skip59
+\f@nch@height=\skip60
+\f@nch@footalignment=\skip61
+\f@nch@widthL=\skip62
+\f@nch@widthC=\skip63
+\f@nch@widthR=\skip64
+\@temptokenb=\toks23
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/float/float
+.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count285
+\float@exts=\toks24
+\float@box=\box57
+\@float@everytoks=\toks25
+\@floatcapt=\box58
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/tools/after
+page.sty
+Package: afterpage 2023/07/04 v1.08 After-Page Package (DPC)
+\AP@output=\toks26
+\AP@partial=\box59
+\AP@footins=\box60
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/xcolor/xcol
+or.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/graphics-cf
+g/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: xetex.def on input line 274.
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/graphics/ma
+thcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/amsmath/ams
+math.sty
+Package: amsmath 2024/11/05 v2.17t AMS math features
+\@mathmargin=\skip65
+
+For additional information on amsmath, use the `?' option.
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/amsmath/ams
+text.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/amsmath/ams
+gen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks27
+\ex@=\dimen156
+))
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/amsmath/ams
+bsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen157
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/amsmath/ams
+opn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count286
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count287
+\leftroot@=\count288
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count289
+\DOTSCASE@=\count290
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box61
+\strutbox@=\box62
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen158
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count291
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count292
+\dotsspace@=\muskip17
+\c@parentequation=\count293
+\dspbrk@lvl=\count294
+\tag@help=\toks28
+\row@=\count295
+\column@=\count296
+\maxfields@=\count297
+\andhelp@=\toks29
+\eqnshift@=\dimen159
+\alignsep@=\dimen160
+\tagshift@=\dimen161
+\tagwidth@=\dimen162
+\totwidth@=\dimen163
+\lineht@=\dimen164
+\@envbody=\toks30
+\multlinegap=\skip66
+\multlinetaggap=\skip67
+\mathdisplay@stack=\toks31
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/amsfonts/am
+ssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/amsfonts/am
+sfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/tools/dcolu
+mn.sty
+Package: dcolumn 2023/07/08 v1.06 decimal alignment package (DPC)
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/tools/array
+.sty
+Package: array 2024/10/17 v2.6g Tabular extension package (FMi)
+\col@sep=\dimen165
+\ar@mcellbox=\box63
+\extrarowheight=\dimen166
+\NC@list=\toks32
+\extratabsurround=\skip68
+\backup@length=\skip69
+\ar@cellbox=\box64
+))
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/tocloft/toc
+loft.sty
+Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
+Package tocloft Info: The document has chapter divisions on input line 51.
+\cftparskip=\skip70
+\cftbeforetoctitleskip=\skip71
+\cftaftertoctitleskip=\skip72
+\cftbeforepartskip=\skip73
+\cftpartnumwidth=\skip74
+\cftpartindent=\skip75
+\cftbeforechapskip=\skip76
+\cftchapindent=\skip77
+\cftchapnumwidth=\skip78
+\cftbeforesecskip=\skip79
+\cftsecindent=\skip80
+\cftsecnumwidth=\skip81
+\cftbeforesubsecskip=\skip82
+\cftsubsecindent=\skip83
+\cftsubsecnumwidth=\skip84
+\cftbeforesubsubsecskip=\skip85
+\cftsubsubsecindent=\skip86
+\cftsubsubsecnumwidth=\skip87
+\cftbeforeparaskip=\skip88
+\cftparaindent=\skip89
+\cftparanumwidth=\skip90
+\cftbeforesubparaskip=\skip91
+\cftsubparaindent=\skip92
+\cftsubparanumwidth=\skip93
+\cftbeforeloftitleskip=\skip94
+\cftafterloftitleskip=\skip95
+\cftbeforefigskip=\skip96
+\cftfigindent=\skip97
+\cftfignumwidth=\skip98
+\c@lofdepth=\count298
+\c@lotdepth=\count299
+\cftbeforelottitleskip=\skip99
+\cftafterlottitleskip=\skip100
+\cftbeforetabskip=\skip101
+\cfttabindent=\skip102
+\cfttabnumwidth=\skip103
+) (./dics.sty
+\fiveblanklines=\skip104
+\tenblanklines=\skip105
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/nomencl/nom
+encl.sty
+Package: nomencl 2021/11/10 v5.6 Nomenclature package
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/xkeyval/xke
+yval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/generic/xkeyval/x
+keyval.tex
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/generic/xkeyval/x
+kvutils.tex
+\XKV@toks=\toks33
+\XKV@tempa@toks=\toks34
+)
+\XKV@depth=\count300
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/base/ifthen
+.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/koma-script
+/tocbasic.sty
+Package: tocbasic 2024/10/24 v3.43 KOMA-Script package (handling toc-files)
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/koma-script
+/scrbase.sty
+Package: scrbase 2024/10/24 v3.43 KOMA-Script package (KOMA-Script-independent 
+basics and keyval usage)
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/koma-script
+/scrlfile.sty
+Package: scrlfile 2024/10/24 v3.43 KOMA-Script package (file load hooks)
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/koma-script
+/scrlfile-hook.sty
+Package: scrlfile-hook 2024/10/24 v3.43 KOMA-Script package (using LaTeX hooks)
+
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/koma-script
+/scrlogo.sty
+Package: scrlogo 2024/10/24 v3.43 KOMA-Script package (logo)
+)))
+Applying: [2021/05/01] Usage of raw or classic option list on input line 254.
+Already applied: [0000/00/00] Usage of raw or classic option list on input line
+ 370.
+)
+\scr@dte@tocline@numberwidth=\skip106
+\scr@dte@tocline@numbox=\box65
+)
+Package tocbasic Info: omitting babel extension for `nlo'
+(tocbasic)             because of missing \bbl@set@language on input line 187.
+Package tocbasic Info: omitting babel extension for `nls'
+(tocbasic)             because of missing \bbl@set@language on input line 188.
+\nomlabelwidth=\dimen167
+\nom@tempdim=\dimen168
+\nomitemsep=\skip107
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/was/upgreek
+.sty
+Package: upgreek 2003/02/12 v2.0 (WaS)
+Package upgreek Info: Using Euler Roman for upright Greek on input line 31.
+\symugrf@m=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `ugrf@m' in version `bold'
+(Font)                  U/eur/m/n --> U/eur/b/n on input line 38.
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/mathtools/m
+athtools.sty
+Package: mathtools 2024/10/04 v1.31 mathematical typesetting tools
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/tools/calc.
+sty
+Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count301
+\calc@Bcount=\count302
+\calc@Adimen=\dimen169
+\calc@Bdimen=\dimen170
+\calc@Askip=\skip108
+\calc@Bskip=\skip109
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count303
+\calc@Cskip=\skip110
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/mathtools/m
+hsetup.sty
+Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
+)
+\g_MT_multlinerow_int=\count304
+\l_MT_multwidth_dim=\dimen171
+\origjot=\skip111
+\l_MT_shortvdotswithinadjustabove_dim=\dimen172
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen173
+\l_MT_above_intertext_sep=\dimen174
+\l_MT_below_intertext_sep=\dimen175
+\l_MT_above_shortintertext_sep=\dimen176
+\l_MT_below_shortintertext_sep=\dimen177
+\xmathstrut@box=\box66
+\xmathstrut@dim=\dimen178
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/hyperref/hy
+perref.sty
+Package: hyperref 2024-11-05 v7.01l Hypertext links for LaTeX
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/kvsetkeys/k
+vsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/generic/kvdefinek
+eys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/generic/pdfescape
+/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/generic/ltxcmds/l
+txcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/generic/pdftexcmd
+s/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/generic/infwarerr
+/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode not found.
+))
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/hycolor/hyc
+olor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/hyperref/na
+meref.sty
+Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/refcount/re
+fcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/generic/gettitles
+tring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/kvoptions/k
+voptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count305
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/etoolbox/et
+oolbox.sty
+Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count306
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/generic/stringenc
+/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\@linkdim=\dimen179
+\Hy@linkcounter=\count307
+\Hy@pagecounter=\count308
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/hyperref/pd
+1enc.def
+File: pd1enc.def 2024-11-05 v7.01l Hyperref: PDFDocEncoding definition (HO)
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/generic/intcalc/i
+ntcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count309
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/hyperref/pu
+enc.def
+File: puenc.def 2024-11-05 v7.01l Hyperref: PDF Unicode definition (HO)
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/greek-fonte
+nc/puenc-greek.def
+File: puenc-greek.def 2023-09-12 2.5 Greek LICRs for PDF strings
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/greek-fonte
+nc/greek-fontenc.def
+File: greek-fontenc.def 2023-09-12 2.5 Common Greek font encoding definitions
+)))
+Package hyperref Info: Hyper figures OFF on input line 4157.
+Package hyperref Info: Link nesting OFF on input line 4162.
+Package hyperref Info: Hyper index ON on input line 4165.
+Package hyperref Info: Plain pages OFF on input line 4172.
+Package hyperref Info: Backreferencing OFF on input line 4177.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4424.
+\c@Hy@tempcnt=\count310
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip18
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4763.
+\XeTeXLinkMargin=\dimen180
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/generic/bitset/bi
+tset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/generic/bigintcal
+c/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count311
+\Field@Width=\dimen181
+\Fld@charsize=\dimen182
+Package hyperref Info: Hyper figures OFF on input line 6042.
+Package hyperref Info: Link nesting OFF on input line 6047.
+Package hyperref Info: Hyper index ON on input line 6050.
+Package hyperref Info: backreferencing OFF on input line 6057.
+Package hyperref Info: Link coloring OFF on input line 6062.
+Package hyperref Info: Link coloring with OCG OFF on input line 6067.
+Package hyperref Info: PDF/A mode OFF on input line 6072.
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/base/atbegs
+hi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count312
+\c@Item=\count313
+\c@Hfootnote=\count314
+)
+Package hyperref Info: Driver (autodetected): hxetex.
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/hyperref/hx
+etex.def
+File: hxetex.def 2024-11-05 v7.01l Hyperref driver for XeTeX
+\pdfm@box=\box67
+\c@Hy@AnnotLevel=\count315
+\HyField@AnnotCount=\count316
+\Fld@listcount=\count317
+\c@bookmark@seq@number=\count318
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/rerunfilech
+eck/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/base/atvery
+end-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/generic/uniquecou
+nter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+85.
+)
+\Hy@SectionHShift=\skip112
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/tools/longt
+able.sty
+Package: longtable 2024-10-27 v4.22 Multi-page Table package (DPC)
+\LTleft=\skip113
+\LTright=\skip114
+\LTpre=\skip115
+\LTpost=\skip116
+\LTchunksize=\count319
+\LTcapwidth=\dimen183
+\LT@head=\box68
+\LT@firsthead=\box69
+\LT@foot=\box70
+\LT@lastfoot=\box71
+\LT@gbox=\box72
+\LT@cols=\count320
+\LT@rows=\count321
+\c@LT@tables=\count322
+\c@LT@chunks=\count323
+\LT@p@ftn=\toks35
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/ragged2e/ra
+gged2e.sty
+Package: ragged2e 2023/06/22 v3.6 ragged2e Package
+\CenteringLeftskip=\skip117
+\RaggedLeftLeftskip=\skip118
+\RaggedRightLeftskip=\skip119
+\CenteringRightskip=\skip120
+\RaggedLeftRightskip=\skip121
+\RaggedRightRightskip=\skip122
+\CenteringParfillskip=\skip123
+\RaggedLeftParfillskip=\skip124
+\RaggedRightParfillskip=\skip125
+\JustifyingParfillskip=\skip126
+\CenteringParindent=\skip127
+\RaggedLeftParindent=\skip128
+\RaggedRightParindent=\skip129
+\JustifyingParindent=\skip130
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/algorithms/
+algorithm.sty
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+\@float@every@algorithm=\toks36
+\c@algorithm=\count324
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/algorithmic
+x/algpseudocode.sty
+Package: algpseudocode 
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/algorithmic
+x/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count325
+\c@ALG@rem=\count326
+\c@ALG@nested=\count327
+\ALG@tlm=\skip131
+\ALG@thistlm=\skip132
+\c@ALG@Lnr=\count328
+\c@ALG@blocknr=\count329
+\c@ALG@storecount=\count330
+\c@ALG@tmpcounter=\count331
+\ALG@tmplength=\skip133
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/listings/li
+stings.sty
+\lst@mode=\count332
+\lst@gtempboxa=\box73
+\lst@token=\toks37
+\lst@length=\count333
+\lst@currlwidth=\dimen184
+\lst@column=\count334
+\lst@pos=\count335
+\lst@lostspace=\dimen185
+\lst@width=\dimen186
+\lst@newlines=\count336
+\lst@lineno=\count337
+\lst@maxwidth=\dimen187
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/listings/ls
+tpatch.sty
+File: lstpatch.sty 2024/09/23 1.10c (Carsten Heinz)
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/listings/ls
+tmisc.sty
+File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
+\c@lstnumber=\count338
+\lst@skipnumbers=\count339
+\lst@framebox=\box74
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/listings/li
+stings.cfg
+File: listings.cfg 2024/09/23 1.10c listings configuration
+))
+Package: listings 2024/09/23 1.10c (Carsten Heinz)
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/caption/cap
+tion.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/caption/cap
+tion3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen188
+\captionmargin=\dimen189
+\caption@leftmargin=\dimen190
+\caption@rightmargin=\dimen191
+\caption@width=\dimen192
+\caption@indent=\dimen193
+\caption@parindent=\dimen194
+\caption@hangindent=\dimen195
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+Package caption Info: \@makecaption = \long macro:#1#2->\singlespace {\textbf {
+#1} #2\par }  on input line 1175.
+)
+
+Package caption Warning: Unknown document class (or package),
+(caption)                standard defaults will be used.
+See the caption package documentation for explanation.
+
+\c@caption@flags=\count340
+\c@continuedfloat=\count341
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: longtable package is loaded.
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/caption/ltc
+aption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+))
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/subfiles/su
+bfiles.sty
+Package: subfiles 2020/11/14 v2.2 Multi-file projects (package)
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/import/impo
+rt.sty
+Package: import 2020/04/01  v 6.2
+))
+\@nomenclaturefile=\write3
+\openout3 = `main.nlo'.
+
+Package nomencl Info: Writing nomenclature file main.nlo on input line 96.
+) (./title_page_info.tex)
+
+LaTeX Warning: Unused global option(s):
+    [A4].
+
+(./main.aux (./main-pre.aux) (./abstract.aux) (./chapter1_research.aux
+
+LaTeX Warning: Label `DescriptiveLabel' multiply defined.
+
+
+LaTeX Warning: Label `DescriptiveLabel' multiply defined.
+
+
+LaTeX Warning: Label `DescriptiveLabel' multiply defined.
+
+
+LaTeX Warning: Label `DescriptiveLabel' multiply defined.
+
+) (./chapter2_license.aux) (./chapter3_architecture.aux) (./appendix_tables.aux
+) (./appendix_access_rule.aux) (./appendix_portal_controller.aux))
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 9.
+LaTeX Font Info:    Trying to load font information for T3+cmr on input line 9.
+
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/tipa/t3cmr.
+fd
+File: t3cmr.fd 2001/12/31 TIPA font definitions
+)
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+
+Package fontspec Info: 
+(fontspec)             Adjusting the maths setup (use [no-math] to avoid
+(fontspec)             this).
+
+\symlegacymaths=\mathgroup7
+LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 9.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 9.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 9.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 9.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 9.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 9.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 9.
+LaTeX Font Info:    Redeclaring math accent \check on input line 9.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 9.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 9.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 9.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 9.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 9.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 9.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 9.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 9.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 9.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 9.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 9.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 9.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 9.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 9.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 9.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 9.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `normal' on input line 9.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(0)/m/n on input line 9
+.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 9.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/m/n on input line 
+9.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/m/n on 
+input line 9.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(0)/m/it on input line
+ 9.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/b/n on input line 
+9.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> TU/Arial(0)/m/n on input line 9.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 9.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/b/n on 
+input line 9.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> TU/TimesNewRoman(0)/b/it on input lin
+e 9.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> TU/Arial(0)/b/n on input line 9.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 9.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+*geometry* verbose mode - [ preamble ] result:
+* driver: xetex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: includefoot 
+* h-part:(L,W,R)=(85.35826pt, 472.03123pt, 56.9055pt)
+* v-part:(T,H,B)=(71.13188pt, 666.9326pt, 56.9055pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=472.03123pt
+* \textheight=636.9326pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=-40.6381pt
+* \headheight=14.5pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package hyperref Info: Link coloring OFF on input line 9.
+(./main.out) (./main.out)
+\@outlinefile=\write4
+\openout4 = `main.out'.
+
+\c@lstlisting=\count342
+Package tocbasic Info: omitting babel extension for `lol'
+(tocbasic)             because of missing \bbl@set@language on input line 9.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+\openout2 = `main-pre.aux'.
+
+ (./main-pre.tex
+
+[1
+
+
+]
+LaTeX Font Info:    Trying to load font information for U+msa on input line 5.
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/amsfonts/um
+sa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 5.
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/amsfonts/um
+sb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Overfull \hbox (218.38214pt too wide) in paragraph at lines 5--5
+[][] 
+ []
+
+
+Overfull \hbox (18.0pt too wide) in paragraph at lines 5--5
+[][] 
+ []
+
+
+
+[0
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 10--14
+
+ []
+
+
+Overfull \hbox (13.31721pt too wide) in paragraph at lines 16--17
+[]\TU/TimesNewRoman(0)/m/n/12 Энэ ажлын аль нэг хэсгийг эсвэл бүхлээр нь ямар н
+эг их, дээд сургуулийн зэрэг горилохоор
+ []
+
+
+Overfull \hbox (13.07112pt too wide) in paragraph at lines 18--19
+[]\TU/TimesNewRoman(0)/m/n/12 Ажлыг би өөрөө (хамтарч) хийсэн ба миний хийсэн а
+жил, үзүүлсэн дэмжлэгийг дипломын
+ []
+
+
+
+[1
+
+]
+
+Package geometry Warning: `letterpaper': not available in `\newgeometry'; skipp
+ed.
+
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: xetex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: includehead includefoot 
+* h-part:(L,W,R)=(90.3375pt, 433.62001pt, 90.3375pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43pt, 72.27pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=433.62001pt
+* \textheight=580.93pt
+* \oddsidemargin=18.0675pt
+* \evensidemargin=18.0675pt
+* \topmargin=0.0pt
+* \headheight=14.5pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(./main.toc
+Overfull \hbox (4.09665pt too wide) in paragraph at lines 11--11
+ [][] [][]\TU/TimesNewRoman(0)/m/n/12 Байгууллагын ERP хэрэглээний өнөөгийн бай
+дал (case-based судалгаа)[] []  
+ []
+
+)
+\tf@toc=\write5
+\openout5 = `main.toc'.
+
+
+
+[2
+
+]
+
+Package geometry Warning: `letterpaper': not available in `\newgeometry'; skipp
+ed.
+
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: xetex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: includehead includefoot 
+* h-part:(L,W,R)=(90.3375pt, 433.62001pt, 90.3375pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43pt, 72.27pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=433.62001pt
+* \textheight=580.93pt
+* \oddsidemargin=18.0675pt
+* \evensidemargin=18.0675pt
+* \topmargin=0.0pt
+* \headheight=14.5pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(./main.lof)
+\tf@lof=\write6
+\openout6 = `main.lof'.
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.5pt): 
+(fancyhdr)                Make it at least 14.92621pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.92621pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.42621pt}.
+
+[3
+
+
+
+]
+
+Package geometry Warning: `letterpaper': not available in `\newgeometry'; skipp
+ed.
+
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: xetex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: includehead includefoot 
+* h-part:(L,W,R)=(90.3375pt, 433.62001pt, 90.3375pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43pt, 72.27pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=433.62001pt
+* \textheight=580.93pt
+* \oddsidemargin=18.0675pt
+* \evensidemargin=18.0675pt
+* \topmargin=0.0pt
+* \headheight=14.5pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(./main.lot)
+\tf@lot=\write7
+\openout7 = `main.lot'.
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.5pt): 
+(fancyhdr)                Make it at least 14.92621pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.92621pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.42621pt}.
+
+[4
+
+
+
+] (./main.lol)
+\tf@lol=\write8
+\openout8 = `main.lol'.
+
+
+
+[5
+
+
+
+])
+\openout2 = `abstract.aux'.
+
+ (./abstract.tex
+Overfull \hbox (8.63948pt too wide) in paragraph at lines 2--3
+\TU/TimesNewRoman(0)/m/n/12 Орчин үеийн байгууллагууд бизнесийн үйл ажиллагаага
+а илүү үр ашигтай удирдах, мэдээллийг
+ []
+
+
+Overfull \hbox (6.31506pt too wide) in paragraph at lines 4--5
+[]\TU/TimesNewRoman(0)/m/n/12 Тэдгээрийн дотроос Odoo ERP нь нээлттэй эхийн бүт
+эцтэй, уян хатан, өргөтгөх боломжтой,
+ []
+
+
+Overfull \hbox (11.57423pt too wide) in paragraph at lines 4--5
+\TU/TimesNewRoman(0)/m/n/12 олон салбарт ашиглагддаг систем бөгөөд дэлхийн 175 
+гаруй орны 7 сая гаруй хэрэглэгч ашиглаж
+ []
+
+
+Overfull \hbox (6.21095pt too wide) in paragraph at lines 6--7
+\TU/TimesNewRoman(0)/m/n/12 ашиглах хандлага нэмэгдэж байгаа боловч судалгаанаа
+с харахад эдгээр байгууллагуудын ихэнх
+ []
+
+
+Overfull \hbox (4.83661pt too wide) in paragraph at lines 6--7
+\TU/TimesNewRoman(0)/m/n/12 Community түвшний үйлдлүүдээр хязгаарлагддаг байна.
+ Энэ нь байгууллагууд өндөр өртөгтэй
+ []
+
+
+Overfull \hbox (3.22658pt too wide) in paragraph at lines 6--7
+\TU/TimesNewRoman(0)/m/n/12 лицензийн системийг ашиглаж байгаа атлаа үнэ цэнийн
+ хувьд бүрэн өгөөжөө гаргаж чадахгүй,
+ []
+
+
+Overfull \hbox (14.46466pt too wide) in paragraph at lines 8--9
+[]\TU/TimesNewRoman(0)/m/n/12 Иймээс Odoo ERP системийг илүү оновчтой, үр ашигт
+ай ашиглахын тулд Portal хэрэглэгчийн
+ []
+
+
+Overfull \hbox (40.7176pt too wide) in paragraph at lines 8--9
+\TU/TimesNewRoman(0)/m/n/12 орчныг хөгжүүлэх, зориулалтын Controller ашиглан хэ
+рэглэгч ба харилцагчийн оролцоог нэмэгдүүлэх
+ []
+
+
+Overfull \hbox (15.9209pt too wide) in paragraph at lines 10--11
+[]\TU/TimesNewRoman(0)/m/n/12 Энэхүү дипломын ажлын хүрээнд Odoo ERP Enterprise
+ системийг ашиглаж буй байгууллагын
+ []
+
+
+Overfull \hbox (23.51253pt too wide) in paragraph at lines 10--11
+\TU/TimesNewRoman(0)/m/n/12 зардлын оновчлол, хэрэглэгчийн туршлагыг сайжруулах
+ зорилгоор Portal хэрэглэгчийн интерфэйс
+ []
+
+
+Overfull \hbox (2.112pt too wide) in paragraph at lines 10--11
+\TU/TimesNewRoman(0)/m/n/12 болон Controller-т суурилсан шийдэл боловсруулах бо
+лно. Судалгааны явцад Odoo системийн
+ []
+
+
+Overfull \hbox (4.23793pt too wide) in paragraph at lines 10--11
+\TU/TimesNewRoman(0)/m/n/12 Community ба Enterprise хувилбарын ялгаа, зардлын б
+үтэц, хэрэглэгчийн хэрэгцээний түвшин,
+ []
+
+
+
+[1
+
+
+
+]
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 11.
+
+
+Overfull \hbox (8.2127pt too wide) in paragraph at lines 12--13
+\TU/TimesNewRoman(0)/m/n/12 хэрэглэгчид ERP системийг шууд ашиглахад төвөгтэй, 
+олон шат дамжлагатай байх нь түгээмэл. 
+ []
+
+
+Overfull \hbox (31.33069pt too wide) in paragraph at lines 14--15
+[]\TU/TimesNewRoman(0)/m/n/12 Иймээс ERP системийн өгөгдөлтэй шууд харилцах, хэ
+рэглэгчдэд зориулсан хөнгөн, ойлгомжтой
+ []
+
+
+Overfull \hbox (1.76233pt too wide) in paragraph at lines 14--15
+\TU/TimesNewRoman(0)/m/n/12 ашиглан ERP системтэй холбогдож, ажилтанд ажлын цаг
+ийн хүсэлт илгээх, ирц бүртгэх болон
+ []
+
+
+Overfull \hbox (10.07503pt too wide) in paragraph at lines 14--15
+\TU/TimesNewRoman(0)/m/n/12 худалдан авалтын мэдээлэлтэй ажиллах боломжийг олго
+х бөгөөд ERP-ийн хүртээмж, үр ашгийг
+ []
+
+
+Overfull \hbox (14.03679pt too wide) in paragraph at lines 16--17
+\TU/TimesNewRoman(0)/m/n/12 terprise буюу лицензтэй хувилбар хэрэглэдэг. Энэ то
+хиолдолд ERP системд бүртгэлтэй хэрэглэгч
+ []
+
+
+Overfull \hbox (35.80275pt too wide) in paragraph at lines 20--21
+\TU/TimesNewRoman(0)/m/n/12 ашиглах зорилгоор Portal хэрэглэгчийн орчныг odoo e
+rp-н controller ашиглан шийдэл боловсруулахад
+ []
+
+
+
+[2]
+Overfull \hbox (8.49396pt too wide) in paragraph at lines 25--26
+[]\TU/TimesNewRoman(0)/m/n/12 Хэрэглэгч, харилцагчийн portal оролцоог нэмэгдүүл
+эх зориулалтын API болон интерфэйс
+ []
+
+
+Overfull \hbox (3.03792pt too wide) in paragraph at lines 33--34
+\TU/TimesNewRoman(0)/m/n/12 эрхийн загвар, Portal болон Controller-ийн үүргийг 
+тодорхойлсон Odoo-ийн албан ёсны баримт
+ []
+
+
+Overfull \hbox (3.3055pt too wide) in paragraph at lines 35--36
+\TU/TimesNewRoman(0)/m/n/12 enterprise орчны хандалтын эрхийн удирдлага (ir.mod
+el.access, ir.rule) болон Portal механизмын
+ []
+
+
+Overfull \hbox (30.26021pt too wide) in paragraph at lines 39--40
+\TU/TimesNewRoman(0)/m/n/12 архитектур, лицензийн зарчим, хэрэглэгчийн эрхийн б
+үтэц, болон portal controller-ийн ажиллагаанд
+ []
+
+
+
+[3]
+Overfull \hbox (15.66699pt too wide) in paragraph at lines 45--46
+\TU/TimesNewRoman(0)/m/n/12 бүтэц дээр төвлөрсөн бөгөөд бусад ERP системийн тех
+никийн гүйцэтгэлийн нарийвчилсан
+ []
+
+
+
+[4])
+\openout2 = `chapter1_research.aux'.
+
+ (./chapter1_research.tex
+1.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\uppercase' on input line 1.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--2
+
+ []
+
+
+Overfull \hbox (3.12154pt too wide) in paragraph at lines 3--4
+\TU/TimesNewRoman(0)/m/n/12 цогц шийдэл бөгөөд байгууллагын санхүү, нягтлан бод
+ох бүртгэл, борлуулалт, худалдан авалт,
+ []
+
+
+Overfull \hbox (10.71062pt too wide) in paragraph at lines 3--4
+\TU/TimesNewRoman(0)/m/n/12 системд уялдуулан нэгтгэдэг программ хангамж юм. ER
+P системийн гол зорилго нь мэдээллийн
+ []
+
+
+Overfull \hbox (20.77113pt too wide) in paragraph at lines 3--4
+\TU/TimesNewRoman(0)/m/n/12 давхардлыг арилгах, шийдвэр гаргалтыг хурдасгах, ба
+йгууллагын нөөцийн оновчтой хуваарилалт
+ []
+
+
+Overfull \hbox (22.0942pt too wide) in paragraph at lines 5--6
+\TU/TimesNewRoman(0)/m/n/12 хэрэгцээ, үйл ажиллагааны онцлогоос хамаарч санхүү,
+ хүний нөөц, бараа материалын менежмент,
+ []
+
+
+Overfull \hbox (3.03302pt too wide) in paragraph at lines 5--6
+\TU/TimesNewRoman(0)/m/n/12 борлуулалт, хэрэглэгчийн харилцааны менежмент (CRM)
+ зэрэг модулиудыг сонгон ашигладаг.
+ []
+
+
+Overfull \hbox (10.92189pt too wide) in paragraph at lines 5--6
+\TU/TimesNewRoman(0)/m/n/12 Модуль тус бүр нь байгууллагын дотоод процессын нэг
+ хэсгийг удирдах бөгөөд эдгээр модулиуд
+ []
+
+
+Overfull \hbox (16.67427pt too wide) in paragraph at lines 7--8
+\TU/TimesNewRoman(0)/m/n/12 хадгалагдаж, бүх модуль, хэлтэс, хэрэглэгчид ижил м
+эдээлэлд хандах боломжтой тул мэдээллийн
+ []
+
+
+
+[5
+
+
+
+
+
+]
+Overfull \hbox (2.66504pt too wide) in paragraph at lines 13--14
+[]\TU/TimesNewRoman(0)/m/n/12 Ийм нөхцөлд байгууллагууд ERP системийн үр ашгийг
+ нэмэгдүүлэхийн тулд хэрэглэгчийн
+ []
+
+
+Overfull \hbox (22.36604pt too wide) in paragraph at lines 13--14
+\TU/TimesNewRoman(0)/m/n/12 хандалтын түвшинг оновчтой тогтоох, шаардлагатай то
+хиолдолд Portal буюу хөнгөн хэрэглэгчийн
+ []
+
+
+Overfull \hbox (18.49509pt too wide) in paragraph at lines 23--25
+[]\TU/TimesNewRoman(0)/m/n/12 ORM нь PostgreSQL өгөгдлийн сантай нягт уялдаа бү
+хий тул өгөгдлийг SQL хэл бичихгүйгээр
+ []
+
+
+Overfull \hbox (28.49936pt too wide) in paragraph at lines 23--25
+\TU/TimesNewRoman(0)/m/n/12 Python кодоор удирдах боломжийг олгодог. Жишээлбэл,
+ \TU/lmtt/m/n/12 models.Model\TU/TimesNewRoman(0)/m/n/12 -ийг өргөтгөн тодорхой
+лсон
+ []
+
+
+Overfull \hbox (3.76137pt too wide) in paragraph at lines 28--29
+\TU/TimesNewRoman(0)/m/n/12 тодорхойлдог бөгөөд эдгээр нь \TU/lmtt/m/n/12 many2
+one\TU/TimesNewRoman(0)/m/n/12 , \TU/lmtt/m/n/12 one2many\TU/TimesNewRoman(0)/m
+/n/12 , \TU/lmtt/m/n/12 many2many \TU/TimesNewRoman(0)/m/n/12 талбаруудаар илэр
+хийлэгддэг. 
+ []
+
+
+Overfull \hbox (9.70369pt too wide) in paragraph at lines 31--33
+[]\TU/lmtt/m/n/12 many2one \TU/TimesNewRoman(0)/m/n/12 — Нэг хүснэгтийн бичлэги
+йг нөгөө хүснэгтийн нэг бичлэгтэй холбох хамаарал.
+ []
+
+
+Overfull \hbox (46.66376pt too wide) in paragraph at lines 31--33
+\TU/TimesNewRoman(0)/m/n/12 Жишээлбэл, \TU/lmtt/m/n/12 hr.employee \TU/TimesNew
+Roman(0)/m/n/12 модель нь ”\TU/lmtt/m/n/12 department_id = fields.Many2one('hr.
+department')
+ []
+
+
+Overfull \hbox (5.27365pt too wide) in paragraph at lines 33--35
+[]\TU/lmtt/m/n/12 one2many \TU/TimesNewRoman(0)/m/n/12 — Нэг бичлэгийг олон бич
+лэгтэй холбох хамаарал. Жишээ нь, \TU/lmtt/m/n/12 hr.department
+ []
+
+
+Overfull \hbox (12.9803pt too wide) in paragraph at lines 33--35
+\TU/TimesNewRoman(0)/m/n/12 моделийн \TU/lmtt/m/n/12 employee_ids = fields.One2
+many('hr.employee', 'department_id') \TU/TimesNewRoman(0)/m/n/12 гэж
+ []
+
+
+
+[6]
+Overfull \hbox (24.30786pt too wide) in paragraph at lines 35--37
+[]\TU/lmtt/m/n/12 many2many \TU/TimesNewRoman(0)/m/n/12 — Хоёр хүснэгтийн хооро
+нд олон-олон харилцаа үүсгэх. Жишээлбэл, \TU/lmtt/m/n/12 res.users
+ []
+
+
+Overfull \hbox (16.30434pt too wide) in paragraph at lines 39--40
+[]\TU/TimesNewRoman(0)/m/n/12 Эдгээр хамаарлууд нь өгөгдлийн логик уялдаа, бүтц
+ийн нэгтгэл, мэдээллийн дахин ашиглалт-
+ []
+
+
+Overfull \hbox (55.18066pt too wide) in paragraph at lines 43--44
+[]\TU/TimesNewRoman(0)/m/n/12 View түвшин нь хэрэглэгчийн системтэй харилцах ин
+терфэйс бөгөөд XML хэл дээр тодорхойлогддог.
+ []
+
+
+Overfull \hbox (5.91309pt too wide) in paragraph at lines 49--50
+[]\TU/TimesNewRoman(0)/m/n/12 Controller нь HTTP хүсэлт болон системийн өгөгдли
+йн түвшний логикийг холбодог дундын
+ []
+
+
+Overfull \hbox (29.79742pt too wide) in paragraph at lines 49--50
+\TU/TimesNewRoman(0)/m/n/12 давхарга юм. \TU/lmtt/m/n/12 @http.route \TU/TimesN
+ewRoman(0)/m/n/12 декоратор ашиглан хүсэлтийн зам, зөвшөөрлийн түвшин (\TU/lmtt
+/m/n/12 auth='user'\TU/TimesNewRoman(0)/m/n/12 ,
+ []
+
+
+Overfull \hbox (2.19122pt too wide) in paragraph at lines 51--52
+\TU/TimesNewRoman(0)/m/n/12 үндэс болж, Enterprise лицензгүй хэрэглэгчдэд хязга
+арлагдмал CRUD үйлдэл хийх боломжийг
+ []
+
+
+Overfull \hbox (18.60744pt too wide) in paragraph at lines 55--57
+[]\TU/TimesNewRoman(0)/m/n/12 Odoo нь бүрэн модульчлагдсан систем бөгөөд модуль
+ бүр тодорхой бизнесийн үйл ажиллагааг
+ []
+
+
+
+[7]
+File: images/module_butests.png Graphic file (type bmp)
+<images/module_butests.png>
+
+
+[8]
+Overfull \hbox (1.16096pt too wide) in paragraph at lines 86--87
+[]\TU/TimesNewRoman(0)/m/n/12 Үйлдвэрлэлийн орчинд (production environment) оло
+н worker бүхий архитектур, Redis кэш,
+ []
+
+
+Overfull \hbox (32.33887pt too wide) in paragraph at lines 92--94
+[]\TU/TimesNewRoman(0)/m/n/12 Odoo ERP системийн Portal нь байгууллагын дотоод 
+мэдээллийн системийг хөнгөн хэрэглэгчийн
+ []
+
+
+Overfull \hbox (17.63739pt too wide) in paragraph at lines 92--94
+\TU/TimesNewRoman(0)/m/n/12 орчинд нээх юм. Энэ нь байгууллагын гадаад болон до
+тоод хэрэглэгчдэд (жишээлбэл: харилцагч,
+ []
+
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <12> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 101.
+
+Overfull \hbox (10.41943pt too wide) in paragraph at lines 101--103
+[]\TU/TimesNewRoman(0)/b/n/12 Portal User (\TU/lmtt/b/n/12 res.users.share=True
+\TU/TimesNewRoman(0)/b/n/12 ) \TU/TimesNewRoman(0)/m/n/12 — лицензгүй, портал х
+элбэрийн хэрэглэгч. Тухайн
+ []
+
+
+Overfull \hbox (40.1797pt too wide) in paragraph at lines 103--104
+[]\TU/TimesNewRoman(0)/b/n/12 Portal Controller (Backend Layer) \TU/TimesNewRom
+an(0)/m/n/12 — серверийн талын хяналтын давхарга бөгөөд хэрэглэгчийн
+ []
+
+
+
+[9]
+Overfull \hbox (20.8574pt too wide) in paragraph at lines 104--105
+\TU/TimesNewRoman(0)/m/n/12 бөгөөд Odoo backend-тэй REST эсвэл JSON-RPC протоко
+лоор холбогдон өгөгдлийг үзүүлэх,
+ []
+
+
+Overfull \hbox (2.87346pt too wide) in paragraph at lines 111--112
+[]\TU/TimesNewRoman(0)/m/n/12 Odoo 18.0 хувилбарт Controller давхарга нь \TU/lm
+tt/m/n/12 odoo.http.Controller \TU/TimesNewRoman(0)/m/n/12 дээр суурилдаг бөгөө
+д
+ []
+
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/listings/ls
+tlang1.sty
+File: lstlang1.sty 2024/09/23 1.10c listings language file
+)
+
+[10]
+Overfull \hbox (44.3726pt too wide) in paragraph at lines 135--136
+[]\TU/TimesNewRoman(0)/m/n/12 Энд \TU/lmtt/m/n/12 auth='user' \TU/TimesNewRoman
+(0)/m/n/12 параметр ашиглагдаж байгаа нь портал хэрэглэгчийг баталгаажсан хэрэг
+лэгчийн
+ []
+
+
+Overfull \hbox (5.54048pt too wide) in paragraph at lines 135--136
+\TU/TimesNewRoman(0)/m/n/12 түвшинд шалгах бөгөөд дараа нь тухайн хэрэглэгч \TU
+/lmtt/m/n/12 base.group_portal \TU/TimesNewRoman(0)/m/n/12 бүлэгт багтсан эсэхи
+йг
+ []
+
+
+Overfull \hbox (0.43427pt too wide) in paragraph at lines 141--143
+\TU/TimesNewRoman(0)/m/n/12 өгөгдөлтэй харьцдаг. Хэрэглэгчийн талын (frontend) 
+архитектур дараах дарааллаар ажиллана: 
+ []
+
+
+Overfull \hbox (0.37697pt too wide) in paragraph at lines 144--146
+[]\TU/TimesNewRoman(0)/b/n/12 Login / Session Authentication \TU/TimesNewRoman(
+0)/m/n/12 Хэрэглэгч нэвтэрсний дараа серверээс cookie эсвэл токен
+ []
+
+
+Overfull \hbox (4.4644pt too wide) in paragraph at lines 148--150
+[]\TU/TimesNewRoman(0)/b/n/12 Backend Controller хүлээн авах \TU/TimesNewRoman(
+0)/m/n/12 Controller нь \TU/lmtt/m/n/12 auth='user' \TU/TimesNewRoman(0)/m/n/12
+ authentication шалгалт хийж,
+ []
+
+
+Overfull \hbox (0.52345pt too wide) in paragraph at lines 150--152
+[]\TU/TimesNewRoman(0)/b/n/12 Model interaction \TU/TimesNewRoman(0)/m/n/12 Con
+troller нь \TU/lmtt/m/n/12 request.env['model.name'] \TU/TimesNewRoman(0)/m/n/1
+2 ашиглан бизнес логиктой
+ []
+
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 157.
+
+
+[11]
+Overfull \hbox (18.65802pt too wide) in paragraph at lines 165--166
+[]\TU/TimesNewRoman(0)/m/n/12 Энэхүү архитектур нь Odoo ERP системийг илүү API-
+центрик, фронтенд технологид нээлттэй
+ []
+
+
+Overfull \hbox (39.62619pt too wide) in paragraph at lines 172--173
+[]\TU/TimesNewRoman(0)/b/n/12 Authorization Layer: \TU/lmtt/m/n/12 user.has_gro
+up('base.group_portal') \TU/TimesNewRoman(0)/m/n/12 шалгалт хийж зөвшөөрөгдсөн
+ []
+
+
+Overfull \hbox (18.38313pt too wide) in paragraph at lines 173--174
+[]\TU/TimesNewRoman(0)/b/n/12 Access Control Layer: \TU/lmtt/m/n/12 ir.model.ac
+cess.csv \TU/TimesNewRoman(0)/m/n/12 болон \TU/lmtt/m/n/12 ir.rule \TU/TimesNew
+Roman(0)/m/n/12 файлуудаар тухайн хэрэглэгч
+ []
+
+
+Overfull \hbox (1.44807pt too wide) in paragraph at lines 176--178
+[]\TU/TimesNewRoman(0)/m/n/12 Ингэснээр portal хэрэглэгч системийн мэдээлэлд бү
+рэн хандахгүй боловч, өөрийн ажилтай
+ []
+
+
+Overfull \hbox (15.41566pt too wide) in paragraph at lines 176--178
+\TU/TimesNewRoman(0)/m/n/12 холбоотой процессууд (цагийн хүсэлт, худалдан авалт
+, ирц бүртгэл гэх мэт) гүйцэтгэх боломжтой
+ []
+
+
+
+[12]
+Overfull \hbox (35.44496pt too wide) in paragraph at lines 193--194
+\TU/TimesNewRoman(0)/m/n/12 RBAC-ийн практик хэрэгжилт болж, портал хэрэглэгчдэ
+д ”зөвхөн өөрийнх”-ийг харах, ”зөвшөөрсөн
+ []
+
+
+Overfull \hbox (3.00458pt too wide) in paragraph at lines 197--199
+\TU/TimesNewRoman(0)/m/n/12 User” төрлийн хэрэглэгчтэй харьцуулахад модель руу 
+шууд хандах эрхгүй байдаг. Тодруулбал,
+ []
+
+
+Overfull \hbox (39.44081pt too wide) in paragraph at lines 200--201
+[]\TU/TimesNewRoman(0)/m/n/12 Тухайн model дээр \TU/lmtt/m/n/12 group_portal \T
+U/TimesNewRoman(0)/m/n/12 эсвэл түүнтэй холбогдох access rule байхгүй бол \TU/l
+mtt/m/n/12 AccessError
+ []
+
+
+Overfull \hbox (58.81454pt too wide) in paragraph at lines 204--205
+[]\TU/TimesNewRoman(0)/m/n/12 Иймд portal хэрэглэгчдэд зориулсан тусгай модель 
+түвшний хандалтын файл (\TU/lmtt/m/n/12 ir.model.access.csv\TU/TimesNewRoman(0)
+/m/n/12 )
+ []
+
+
+Overfull \hbox (15.6036pt too wide) in paragraph at lines 208--209
+[]\TU/lmtt/m/n/12 ir.model.access.csv \TU/TimesNewRoman(0)/m/n/12 файл нь Odoo 
+модулийн root түвшинд байрлах бөгөөд тухайн модульд
+ []
+
+
+
+[13]
+Overfull \hbox (24.3297pt too wide) in paragraph at lines 222--223
+[]\TU/TimesNewRoman(0)/m/n/12 Ингэснээр Portal Controller нь \TU/lmtt/m/n/12 re
+quest.env['hr.leave'].sudo() \TU/TimesNewRoman(0)/m/n/12 гэх мэтээр тухайн моде
+лийг
+ []
+
+
+Overfull \hbox (26.22072pt too wide) in paragraph at lines 226--227
+[]\TU/TimesNewRoman(0)/m/n/12 Model access rule нь хэрэглэгч тухайн модельд яма
+р төрлийн үйлдэл хийж болохыг хязгаарладаг
+ []
+
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/listings/ls
+tlang1.sty
+File: lstlang1.sty 2024/09/23 1.10c listings language file
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/listings/ls
+tmisc.sty
+File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
+)
+
+[14]
+Overfull \hbox (9.59557pt too wide) in paragraph at lines 241--242
+[]\TU/TimesNewRoman(0)/m/n/12 Бусад ажилтны өгөгдөл рүү хандах боломжийг \TU/lm
+tt/m/n/12 domain_force \TU/TimesNewRoman(0)/m/n/12 нөхцлөөр бүрэн хориглоно. 
+ []
+
+
+Overfull \hbox (8.16388pt too wide) in paragraph at lines 246--248
+[]\TU/TimesNewRoman(0)/m/n/12 Portal Controller нь HTTP түвшинд хэрэглэгчийн хү
+сэлтийг хүлээн авч, тухайн хэрэглэгчийн
+ []
+
+
+Overfull \hbox (79.5087pt too wide) in paragraph at lines 249--250
+[]\TU/lmtt/m/n/12 AccessError: The requested operation cannot be completed due 
+to security restrictions. 
+ []
+
+
+
+[15]
+Overfull \hbox (11.5901pt too wide) in paragraph at lines 281--282
+[]\TU/lmtt/m/n/12 ir.model.access.csv \TU/TimesNewRoman(0)/m/n/12 — \TU/lmtt/m/
+n/12 base.group_portal group\TU/TimesNewRoman(0)/m/n/12 -д \TU/lmtt/m/n/12 hr.l
+eave model\TU/TimesNewRoman(0)/m/n/12 -д CRUD хандалт
+ []
+
+
+Overfull \hbox (4.21191pt too wide) in paragraph at lines 299--300
+[]\TU/TimesNewRoman(0)/m/n/12 Controller түвшинд эрхийн алдаа үүсэхгүйгээр CRUD
+ үйлдэл гүйцэтгэх боломж бүрдэнэ. 
+ []
+
+)
+
+[16]
+\openout2 = `chapter2_license.aux'.
+
+ (./chapter2_license.tex
+2.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\uppercase' on input line 1.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--2
+
+ []
+
+
+Overfull \hbox (26.14325pt too wide) in paragraph at lines 13--15
+[]\TU/TimesNewRoman(0)/b/n/12 Ажилтан бүрд бүрэн эрх олгодог. \TU/TimesNewRoman
+(0)/m/n/12 Олон байгууллага Enterprise лицензтэй учир ажилтнуудаа
+ []
+
+
+Overfull \hbox (9.8323pt too wide) in paragraph at lines 13--15
+\TU/lmtt/m/n/12 "internal user" \TU/TimesNewRoman(0)/m/n/12 болгон бүртгэж, хэр
+эглэгчийн тоогоор лицензийн төлбөр төлдөг. Гэтэл
+ []
+
+
+Overfull \hbox (10.4051pt too wide) in paragraph at lines 13--15
+\TU/TimesNewRoman(0)/m/n/12 ажилчдын дийлэнх нь ERP-ийн цөөн функц (агаарын тээ
+врийн замын хүсэлт, ирц бүртгэл,
+ []
+
+
+Overfull \hbox (4.0827pt too wide) in paragraph at lines 19--20
+[]\TU/TimesNewRoman(0)/b/n/12 Лицензийг хугацаагаар сунгах үед зардлыг өсдөг. \
+TU/TimesNewRoman(0)/m/n/12 Odoo Enterprise лиценз нь гэрээгээр
+ []
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.5pt): 
+(fancyhdr)                Make it at least 14.92621pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.92621pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.42621pt}.
+
+[17
+
+
+
+
+]
+Overfull \hbox (6.54248pt too wide) in paragraph at lines 30--31
+[]\TU/TimesNewRoman(0)/b/n/12 Цагийн хүсэлт. \TU/TimesNewRoman(0)/m/n/12 Дотоод
+ ажилтнууд ирц, цагийн хүсэлт гаргахдаа Enterprise хэрэглэгчийн
+ []
+
+
+Overfull \hbox (3.53857pt too wide) in paragraph at lines 32--33
+\TU/TimesNewRoman(0)/m/n/12 санал тавих зэрэг энгийн процессийг portal-аар дамж
+уулж болно. Өөрөөр хэлбэл, зөвхөн
+ []
+
+
+Overfull \hbox (23.47723pt too wide) in paragraph at lines 34--35
+[]\TU/TimesNewRoman(0)/b/n/12 Тайлан үзэх. \TU/TimesNewRoman(0)/m/n/12 Удирдлаг
+ын түвшний эсвэл хариуцсан ажилтны хувьд тайлан харах шаардлага
+ []
+
+
+Overfull \hbox (11.70784pt too wide) in paragraph at lines 37--38
+[]\TU/TimesNewRoman(0)/m/n/12 Одоогийн нөхцөл байдлыг нэгтгэн дүгнэхэд, олон ба
+йгууллага Odoo Enterprise-ийг өргөнөөр
+ []
+
+
+Overfull \hbox (15.55275pt too wide) in paragraph at lines 37--38
+\TU/TimesNewRoman(0)/m/n/12 ашиглаж байгаа боловч лицензийн хэт хэрэглээ болон 
+Enterprise модуль ашиглалтын дутагдалтай
+ []
+
+
+Overfull \hbox (1.68896pt too wide) in paragraph at lines 37--38
+\TU/TimesNewRoman(0)/m/n/12 байдал ажиглагддаг. Portal хэрэглэгчийн орчин, cont
+roller механизмыг ашигласнаар лицензтэй
+ []
+
+
+Overfull \hbox (38.48598pt too wide) in paragraph at lines 37--38
+\TU/TimesNewRoman(0)/m/n/12 хэрэглэгчдийн тоог бууруулах, зардлыг хэмнэх, энгий
+н хэрэглэгчдэд зориулсан хөнгөн интерфэйсийг
+ []
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.5pt): 
+(fancyhdr)                Make it at least 14.92621pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.92621pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.42621pt}.
+
+[18]
+Overfull \hbox (35.47919pt too wide) in paragraph at lines 44--45
+\TU/TimesNewRoman(0)/m/n/12 хэрэглэх шаардлагатай байсан ч бүх 50 ажилтанд Ente
+rprise лиценз олгожээ. Ингэснээр хэрэглэгчийн
+ []
+
+
+Overfull \hbox (5.88348pt too wide) in paragraph at lines 44--45
+\TU/TimesNewRoman(0)/m/n/12 зардал 50 лицензийн төлбөрөөр тооцогдсон. Судалгаан
+ы явцад 35 ажилтан зөвхөн ирц бүртгэх,
+ []
+
+
+Overfull \hbox (6.74121pt too wide) in paragraph at lines 48--49
+[]\TU/TimesNewRoman(0)/m/n/12 Нэгэн компанийн хувьд Odoo ERP 16 хувилбарыг нэвт
+рүүлсэн бөгөөд компанид 50 ажилтан
+ []
+
+
+Overfull \hbox (0.9305pt too wide) in paragraph at lines 48--49
+\TU/TimesNewRoman(0)/m/n/12 Эдгээрийн 5 лицензийг 35 хүн салбар салбартаа ээлжл
+эн ашиглаж, бараа материалын шаардах
+ []
+
+
+Overfull \hbox (11.56512pt too wide) in paragraph at lines 51--52
+\TU/TimesNewRoman(0)/m/n/12 гэдгийг харуулж байна. Одоогоор олон байгууллага Od
+oo Enterprise лицензийг түлхүү хэрэглэж,
+ []
+
+
+Overfull \hbox (11.87527pt too wide) in paragraph at lines 55--56
+\TU/lmtt/m/n/12 user" \TU/TimesNewRoman(0)/m/n/12 болгож лицензжүүлэх нь түгээм
+эл. Гэвч ажилтнуудын олонхи нь ERP-ийн цөөн функцтэй
+ []
+
+
+Overfull \hbox (13.59456pt too wide) in paragraph at lines 55--56
+\TU/TimesNewRoman(0)/m/n/12 эрхийг оновчтой тохируулах нь Enterprise лицензийн 
+зардлыг бууруулах, системийн ашиглалтыг
+ []
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.5pt): 
+(fancyhdr)                Make it at least 14.92621pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.92621pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.42621pt}.
+
+[19]
+Overfull \hbox (16.01369pt too wide) in paragraph at lines 58--59
+[]\TU/TimesNewRoman(0)/m/n/12 Энэ хэсэгт Odoo Enterprise-ийн лицензийн өртгийг 
+бууруулах зорилгоор портал хэрэглэгчийн
+ []
+
+
+Overfull \hbox (21.2563pt too wide) in paragraph at lines 58--59
+\TU/TimesNewRoman(0)/m/n/12 эрхийг ашиглах арга барил, түүний техникийн шийдэл,
+ аюулгүй байдлын зохицуулалт, системийн
+ []
+
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/sl' in size <12> not avai
+lable
+(Font)              Font shape `TU/TimesNewRoman(0)/m/it' tried instead on inpu
+t line 60.
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/sl' in size <12> not avai
+lable
+(Font)              Font shape `TU/TimesNewRoman(0)/b/it' tried instead on inpu
+t line 60.
+
+Overfull \hbox (4.43752pt too wide) in paragraph at lines 61--62
+\TU/TimesNewRoman(0)/m/n/12 интерфэйсээр дамжуулан зөвхөн өөртэй нь хамаарах эс
+вэл түүнд хуваалцсан мэдээлэлд хандах
+ []
+
+
+Overfull \hbox (6.2469pt too wide) in paragraph at lines 61--62
+\TU/TimesNewRoman(0)/m/n/12 бүр төлбөртэйд тооцогддог бол, зөвхөн портал (share
+=True) хандалттай хэрэглэгчид лицензийн
+ []
+
+
+Overfull \hbox (13.13739pt too wide) in paragraph at lines 61--62
+\TU/TimesNewRoman(0)/m/n/12 төлбөрөөс чөлөөлөгдөнө [[]]. Иймээс байгууллагууд х
+язгаарлагдмал үүрэгтэй олон хэрэглэгчийг
+ []
+
+
+Overfull \hbox (1.11745pt too wide) in paragraph at lines 63--64
+[]\TU/TimesNewRoman(0)/m/n/12 Портал хэрэглэгчид нь группээрээ \TU/lmtt/m/n/12 
+base.group_portal\TU/TimesNewRoman(0)/m/n/12 -д харьяалагдаж, анхдагч байдлаар
+ []
+
+
+Overfull \hbox (42.75941pt too wide) in paragraph at lines 66--67
+[]\TU/TimesNewRoman(0)/m/n/12 Портал орчинд өгөгдөл үүсгэх, хянах, хязгаарлахыг
+ дараах гурван техник хэрэгслээр хэрэгжүүлнэ: 
+ []
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.5pt): 
+(fancyhdr)                Make it at least 14.92621pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.92621pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.42621pt}.
+
+[20]
+Overfull \hbox (36.20218pt too wide) in paragraph at lines 68--69
+[]\TU/TimesNewRoman(0)/b/n/12 Веб Controller (Backend). \TU/lmtt/m/n/12 @http.r
+oute \TU/TimesNewRoman(0)/m/n/12 ашиглан портал хүсэлтийг хүлээн авч, зөвшөөрөг
+дсөн
+ []
+
+
+Overfull \hbox (163.77678pt too wide) in paragraph at lines 68--69
+\TU/TimesNewRoman(0)/m/n/12 талбаруудыг валидац хийсний дараа загваруудтай харь
+цана. \TU/lmtt/m/n/12 auth='user' \TU/TimesNewRoman(0)/m/n/12 ба \TU/lmtt/m/n/1
+2 user.has_group('base.group_portal')
+ []
+
+
+Overfull \hbox (13.26743pt too wide) in paragraph at lines 70--71
+\TU/TimesNewRoman(0)/m/n/12 түвшний хандалтыг хязгаарлана (жишээ нь \TU/lmtt/m/
+n/12 ('employee_id.user_id', '=', user.id)\TU/TimesNewRoman(0)/m/n/12 ).
+ []
+
+)
+Overfull \hbox (47.04053pt too wide) in paragraph at lines 74--18
+\TU/TimesNewRoman(0)/m/n/12 бууруулж, зардлын бүтцийг оновчлох боломжтой. Гол з
+арчим нь: (i) портал талд ”үүсгэх/илгээх/харах”
+ []
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.5pt): 
+(fancyhdr)                Make it at least 14.92621pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.92621pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.42621pt}.
+
+[21]
+\openout2 = `chapter3_architecture.aux'.
+
+ (./chapter3_architecture.tex
+3.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\uppercase' on input line 1.
+
+
+Overfull \hbox (38.27739pt too wide) in paragraph at lines 1--2
+\TU/TimesNewRoman(0)/b/n/24.88 3. СИСТЕМИЙН ЗОХИОМЖ АРХИТЕКТУР 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--2
+
+ []
+
+
+Overfull \hbox (14.50356pt too wide) in paragraph at lines 4--5
+\TU/TimesNewRoman(0)/m/n/12 ERP-ийн үндсэн функцуудыг портал орчинд хялбар, аюу
+лгүй, найдвартай байдлаар хэрэгжүүлэх
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--14
+[]|\TU/TimesNewRoman(0)/m/n/12 ФШ-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--14
+[]|\TU/TimesNewRoman(0)/m/n/12 Хэрэглэгчийн
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--15
+[]|\TU/TimesNewRoman(0)/m/n/12 Хэрэглэгч Odoo-ийн эрхээр портал руу нэвтрэх,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--15
+\TU/TimesNewRoman(0)/m/n/12 профайлын мэдээллийг харах, системээс гарах
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--16
+[]|\TU/TimesNewRoman(0)/m/n/12 ФШ-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--16
+[]|\TU/TimesNewRoman(0)/m/n/12 Ирцийн check-in,
+ []
+
+
+Underfull \hbox (badness 1735) in paragraph at lines 16--17
+[]|\TU/TimesNewRoman(0)/m/n/12 Хэрэглэгч ажлын ирцийн check-in, check-out бүртг
+эл
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+[]|\TU/TimesNewRoman(0)/m/n/12 ФШ-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
+[]|\TU/TimesNewRoman(0)/m/n/12 ФШ-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
+[]|\TU/TimesNewRoman(0)/m/n/12 Худалдан авалтын
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--21
+[]|\TU/TimesNewRoman(0)/m/n/12 Хэрэглэгч худалдан авалтын шинэ хүсэлт үүсгэх,
+ []
+
+
+Underfull \hbox (badness 5592) in paragraph at lines 20--21
+\TU/TimesNewRoman(0)/m/n/12 жагсаалт, дэлгэрэнгүй мэдээллийг харах, хүсэлтийг
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--22
+[]|\TU/TimesNewRoman(0)/m/n/12 ФШ-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--22
+[]|\TU/TimesNewRoman(0)/m/n/12 Барааны шаардах
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
+[]|\TU/TimesNewRoman(0)/m/n/12 Бүтээгдэхүүний зарлагын хүсэлт үүсгэх, холбогдох
+
+ []
+
+
+Underfull \hbox (badness 4341) in paragraph at lines 22--23
+\TU/TimesNewRoman(0)/m/n/12 жагсаалт, гүйлгээний дэлгэрэнгүй мэдээллийг харах
+ []
+
+
+Overfull \hbox (12.0pt too wide) in paragraph at lines 10--25
+ [][] 
+ []
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.5pt): 
+(fancyhdr)                Make it at least 14.92621pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.92621pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.42621pt}.
+
+[22
+
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+[]|\TU/TimesNewRoman(0)/b/n/12 Функционал
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--34
+[]|\TU/TimesNewRoman(0)/b/n/12 Холбогдох API ба Frontend
+ []
+
+
+Overfull \hbox (6.58643pt too wide) in alignment at lines 31--35
+ [] [] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
+[]|\TU/TimesNewRoman(0)/b/n/12 Функционал
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--38
+[]|\TU/TimesNewRoman(0)/b/n/12 Холбогдох API ба Frontend
+ []
+
+
+Overfull \hbox (6.58643pt too wide) in alignment at lines 35--39
+ [] [] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+[]|\TU/TimesNewRoman(0)/b/n/12 ФШ-100
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+\TU/TimesNewRoman(0)/b/n/12 Хэрэглэгчийн
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+[]|\TU/TimesNewRoman(0)/m/n/12 Хэрэглэгч Odoo-ийн эрхээр
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+\TU/TimesNewRoman(0)/m/n/12 мэдээллийг харах, системээс
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--42
+[]|\TU/TimesNewRoman(0)/m/n/12 ФШ-101 —
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--42
+[]|\TU/TimesNewRoman(0)/m/n/12 Хэрэглэгч Odoo ERP эрхээр
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--42
+[]|\TU/lmtt/m/n/12 POST
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--43
+[]|\TU/TimesNewRoman(0)/m/n/12 ФШ-102 —
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--43
+\TU/TimesNewRoman(0)/m/n/12 Профайлын
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--43
+[]|\TU/TimesNewRoman(0)/m/n/12 Нэвтэрсэн хэрэглэгчийн
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--43
+[]|\TU/lmtt/m/n/12 GET
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--43
+\TU/lmtt/m/n/12 /api/auth/employee-profile
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--44
+[]|\TU/TimesNewRoman(0)/m/n/12 ФШ-103 —
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--45
+[]|\TU/lmtt/m/n/12 localStorage \TU/TimesNewRoman(0)/m/n/12 —
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--47
+[]|\TU/TimesNewRoman(0)/b/n/12 ФШ-200 Ирцийн
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--47
+[]|\TU/TimesNewRoman(0)/m/n/12 Ажилтан ирцийн check-in/out
+ []
+
+
+Underfull \hbox (badness 2435) in paragraph at lines 47--47
+\TU/TimesNewRoman(0)/m/n/12 бүртгэл хийх, сүүлийн ирцийн
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+[]|\TU/TimesNewRoman(0)/m/n/12 ФШ-201 — Ирц
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+[]|\TU/lmtt/m/n/12 POST /api/attendance/create
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--49
+[]|\TU/TimesNewRoman(0)/m/n/12 ФШ-202 —
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--49
+\TU/TimesNewRoman(0)/m/n/12 Ирцийн жагсаалт
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--49
+[]|\TU/lmtt/m/n/12 GET /api/attendance/list \TU/TimesNewRoman(0)/m/n/12 —
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--50
+[]|\TU/TimesNewRoman(0)/m/n/12 ФШ-203 —
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--50
+\TU/TimesNewRoman(0)/m/n/12 Сүүлийн ирц
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--50
+[]|\TU/lmtt/m/n/12 GET /api/attendance/list \TU/TimesNewRoman(0)/m/n/12 —
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--52
+[]|\TU/TimesNewRoman(0)/b/n/12 ФШ-300 Цагийн
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--53
+[]|\TU/lmtt/m/n/12 GET
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--54
+[]|\TU/lmtt/m/n/12 GET
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--54
+\TU/lmtt/m/n/12 /api/hr-leave/leave-flow
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 55--55
+[]|\TU/lmtt/m/n/12 POST
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 55--55
+\TU/lmtt/m/n/12 /api/hr-leave/time-request
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--56
+[]|\TU/TimesNewRoman(0)/m/n/12 ФШ-304 —
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--56
+[]|\TU/lmtt/m/n/12 GET
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--56
+\TU/lmtt/m/n/12 /api/hr-leave/time-requests
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--57
+[]|\TU/TimesNewRoman(0)/m/n/12 ФШ-305 —
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--57
+\TU/TimesNewRoman(0)/m/n/12 Хүсэлтийн төлөв
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--57
+[]|\TU/lmtt/m/n/12 GET
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--57
+\TU/lmtt/m/n/12 /api/hr-leave/time-requests
+ []
+
+
+Underfull \hbox (badness 1038) in paragraph at lines 60--60
+[]|\TU/TimesNewRoman(0)/m/n/12 Шинэ худалдан авалтын хүсэлт
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--60
+[]|\TU/lmtt/m/n/12 POST
+ []
+
+
+Overfull \hbox (2.32347pt too wide) in paragraph at lines 60--60
+\TU/lmtt/m/n/12 /api/purchase-request/create
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--61
+[]|\TU/TimesNewRoman(0)/m/n/12 ФШ-402 —
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--62
+[]|\TU/TimesNewRoman(0)/m/n/12 ФШ-403 —
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--62
+[]|\TU/lmtt/m/n/12 GET
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--62
+\TU/lmtt/m/n/12 /api/purchase-request/<id>
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--63
+[]|\TU/TimesNewRoman(0)/m/n/12 ФШ-404 —
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--63
+\TU/TimesNewRoman(0)/m/n/12 Үргэлжлүүлэх
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--63
+[]|\TU/lmtt/m/n/12 POST
+ []
+
+
+Overfull \hbox (64.12347pt too wide) in paragraph at lines 63--63
+\TU/lmtt/m/n/12 /api/purchase-request/<id>/action-next
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--64
+[]|\TU/lmtt/m/n/12 POST
+ []
+
+
+Overfull \hbox (76.48347pt too wide) in paragraph at lines 64--64
+\TU/lmtt/m/n/12 /api/purchase-request/<id>/action-cancel
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--65
+[]|\TU/TimesNewRoman(0)/m/n/12 ФШ-406–410 —
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--65
+\TU/TimesNewRoman(0)/m/n/12 Нэмэлт өгөгдлүүд
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--65
+[]|\TU/TimesNewRoman(0)/m/n/12 Салбар, агуулах, урсгал,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--65
+[]|\TU/lmtt/m/n/12 GET
+ []
+
+
+Underfull \hbox (badness 1824) in paragraph at lines 68--68
+[]|\TU/TimesNewRoman(0)/m/n/12 ФШ-501 — Шинэ
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--68
+[]|\TU/lmtt/m/n/12 POST
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--68
+\TU/lmtt/m/n/12 /api/product-expense/create
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--69
+[]|\TU/TimesNewRoman(0)/m/n/12 ФШ-502 —
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--69
+[]|\TU/lmtt/m/n/12 GET /api/product-expense \TU/TimesNewRoman(0)/m/n/12 —
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\TU/TimesNewRoman(0)/m/n/12 ФШ-503 —
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\TU/lmtt/m/n/12 GET
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 71--71
+[]|\TU/TimesNewRoman(0)/m/n/12 ФШ-504–510 —
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 71--71
+\TU/TimesNewRoman(0)/m/n/12 Урсгал, цуцлах,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 71--71
+[]|\TU/TimesNewRoman(0)/m/n/12 Агуулах, урсгал, гүйлгээний
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 71--71
+[]|\TU/lmtt/m/n/12 GET
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 71--71
+\TU/lmtt/m/n/12 /api/product-expense/...
+ []
+
+
+Overfull \hbox (6.58643pt too wide) in alignment at lines 39--75
+ [] [] [] 
+ []
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.5pt): 
+(fancyhdr)                Make it at least 14.92621pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.92621pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.42621pt}.
+
+[23]
+
+Package fancyhdr Warning: \headheight is too small (14.5pt): 
+(fancyhdr)                Make it at least 14.92621pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.92621pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.42621pt}.
+
+[24]
+
+Package fancyhdr Warning: \headheight is too small (14.5pt): 
+(fancyhdr)                Make it at least 14.92621pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.92621pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.42621pt}.
+
+[25]
+
+Package fancyhdr Warning: \headheight is too small (14.5pt): 
+(fancyhdr)                Make it at least 14.92621pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.92621pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.42621pt}.
+
+[26]
+Overfull \hbox (4.64911pt too wide) in paragraph at lines 80--81
+\TU/TimesNewRoman(0)/m/n/12 үндсэн хэрэглээний тохиолдлууд (Use Case)-ыг илэрхи
+йлнэ. Эдгээр нь хэрэглэгчийн гүйцэтгэх
+ []
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.5pt): 
+(fancyhdr)                Make it at least 14.92621pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.92621pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.42621pt}.
+
+[27]
+Underfull \hbox (badness 6141) in paragraph at lines 109--109
+[]|\TU/TimesNewRoman(0)/b/n/12 Амжилттай төгсгөл
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 111--111
+[]|\TU/TimesNewRoman(0)/b/n/12 Бүтэлгүйтлийн
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 111--111
+\TU/TimesNewRoman(0)/b/n/12 нөхцөл (Failure
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 115--115
+[]|\TU/TimesNewRoman(0)/b/n/12 Үндсэн үйл явц
+ []
+
+
+Underfull \hbox (badness 7944) in paragraph at lines 119--119
+[]|\TU/TimesNewRoman(0)/b/n/12 Хувилбарууд (Alter-
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (14.5pt): 
+(fancyhdr)                Make it at least 14.92621pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.92621pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.42621pt}.
+
+[28]
+Underfull \hbox (badness 6141) in paragraph at lines 149--149
+[]|\TU/TimesNewRoman(0)/b/n/12 Амжилттай төгсгөл
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 151--151
+[]|\TU/TimesNewRoman(0)/b/n/12 Бүтэлгүйтлийн
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 151--151
+\TU/TimesNewRoman(0)/b/n/12 нөхцөл (Failure
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--155
+[]|\TU/TimesNewRoman(0)/b/n/12 Үндсэн үйл явц
+ []
+
+
+Underfull \hbox (badness 7944) in paragraph at lines 159--159
+[]|\TU/TimesNewRoman(0)/b/n/12 Хувилбарууд (Alter-
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (14.5pt): 
+(fancyhdr)                Make it at least 14.92621pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.92621pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.42621pt}.
+
+[29]
+Underfull \hbox (badness 6141) in paragraph at lines 189--189
+[]|\TU/TimesNewRoman(0)/b/n/12 Амжилттай төгсгөл
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 191--191
+[]|\TU/TimesNewRoman(0)/b/n/12 Бүтэлгүйтлийн
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 191--191
+\TU/TimesNewRoman(0)/b/n/12 нөхцөл (Failure
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 195--195
+[]|\TU/TimesNewRoman(0)/b/n/12 Үндсэн үйл явц
+ []
+
+
+Underfull \hbox (badness 7944) in paragraph at lines 199--199
+[]|\TU/TimesNewRoman(0)/b/n/12 Хувилбарууд (Alter-
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (14.5pt): 
+(fancyhdr)                Make it at least 14.92621pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.92621pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.42621pt}.
+
+[30]
+Underfull \hbox (badness 10000) in paragraph at lines 225--226
+[]|\TU/TimesNewRoman(0)/m/n/12 Ажилтан шаардлагатай бараа/үйлчилгээний худалдан
+
+ []
+
+
+Underfull \hbox (badness 6141) in paragraph at lines 229--229
+[]|\TU/TimesNewRoman(0)/b/n/12 Амжилттай төгсгөл
+ []
+
+
+Underfull \hbox (badness 1400) in paragraph at lines 229--230
+[]|\TU/TimesNewRoman(0)/m/n/12 Хүсэлт амжилттай үүсэж, жагсаалт болон дэлгэрэнг
+үй
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 231--231
+[]|\TU/TimesNewRoman(0)/b/n/12 Бүтэлгүйтлийн
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 231--231
+\TU/TimesNewRoman(0)/b/n/12 нөхцөл (Failure
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 235--235
+[]|\TU/TimesNewRoman(0)/b/n/12 Үндсэн үйл явц
+ []
+
+
+Underfull \hbox (badness 7944) in paragraph at lines 239--239
+[]|\TU/TimesNewRoman(0)/b/n/12 Хувилбарууд (Alter-
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (14.5pt): 
+(fancyhdr)                Make it at least 14.92621pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.92621pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.42621pt}.
+
+[31]
+Underfull \hbox (badness 6141) in paragraph at lines 269--269
+[]|\TU/TimesNewRoman(0)/b/n/12 Амжилттай төгсгөл
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 271--271
+[]|\TU/TimesNewRoman(0)/b/n/12 Бүтэлгүйтлийн
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 271--271
+\TU/TimesNewRoman(0)/b/n/12 нөхцөл (Failure
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 275--275
+[]|\TU/TimesNewRoman(0)/b/n/12 Үндсэн үйл явц
+ []
+
+
+Underfull \hbox (badness 7944) in paragraph at lines 279--279
+[]|\TU/TimesNewRoman(0)/b/n/12 Хувилбарууд (Alter-
+ []
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.5pt): 
+(fancyhdr)                Make it at least 14.92621pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.92621pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.42621pt}.
+
+[32]
+Overfull \hbox (5.23128pt too wide) in paragraph at lines 285--286
+\TU/TimesNewRoman(0)/m/n/12 нэмэгдүүлэн, системийн нийт зардлыг оновчтой байлга
+х зорилготойгоор архитектурын зохион
+ []
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.5pt): 
+(fancyhdr)                Make it at least 14.92621pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.92621pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.42621pt}.
+
+[33]
+Overfull \hbox (26.47853pt too wide) in paragraph at lines 289--290
+\TU/TimesNewRoman(0)/m/n/12 зөвхөн лицензтэй хэрэглэгчид дамжуулан системд ханд
+ах боломжтой тул шаардлагагүй лицензийн
+ []
+
+File: images/architecture.png Graphic file (type bmp)
+<images/architecture.png>
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.5pt): 
+(fancyhdr)                Make it at least 14.92621pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.92621pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.42621pt}.
+
+[34]
+Overfull \hbox (8.29964pt too wide) in paragraph at lines 310--311
+[]\TU/TimesNewRoman(0)/m/n/12 Portal хэрэглэгч нь системд нэвтэрсний дараа өөри
+йн хариуцсан мэдээллийг илгээх, шалгах,
+ []
+
+
+Overfull \hbox (24.83284pt too wide) in paragraph at lines 310--311
+\TU/TimesNewRoman(0)/m/n/12 хэрэглэгчийн эрхийг шалгаж, Odoo-ийн дотоод бизнес 
+логиктой харьцан мэдээллийг зохистойгоор
+ []
+
+
+Overfull \hbox (34.67998pt too wide) in paragraph at lines 315--316
+\TU/TimesNewRoman(0)/m/n/12 өөрт хамаарах өгөгдлийг харах, шинээр үүсгэх зэрэг 
+эрхтэй. Хандалтын хяналтыг \TU/lmtt/m/n/12 ir.model.access
+ []
+
+
+Overfull \hbox (18.40189pt too wide) in paragraph at lines 315--316
+\TU/TimesNewRoman(0)/m/n/12 болон \TU/lmtt/m/n/12 record rule\TU/TimesNewRoman(
+0)/m/n/12 -ээр нарийн тогтоосон ба энэ нь дотоод өгөгдөл рүү зөвшөөрөлгүй ханда
+лтаас
+ []
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.5pt): 
+(fancyhdr)                Make it at least 14.92621pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.92621pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.42621pt}.
+
+[35]
+Overfull \hbox (3.9883pt too wide) in paragraph at lines 323--324
+[]\TU/TimesNewRoman(0)/m/n/12 Судалгаанд хамрагдсан байгууллагуудын хувьд порта
+л хэрэглэгчид дараах төрлийн хүсэлт,
+ []
+
+
+Overfull \hbox (5.5915pt too wide) in paragraph at lines 354--355
+[]|\TU/TimesNewRoman(0)/m/n/12 stock.product.other.expense|  
+ []
+
+
+Overfull \hbox (18.52928pt too wide) in paragraph at lines 364--365
+[]\TU/TimesNewRoman(0)/m/n/12 MW Portal систем нь олон давхаргат архитектурт су
+урилсан бөгөөд хэрэглэгчийн UI түвшнээс
+ []
+
+
+Overfull \hbox (4.11098pt too wide) in paragraph at lines 364--365
+\TU/TimesNewRoman(0)/m/n/12 онцлог, бизнесийн хэрэгцээ, мэдээллийн аюулгүй байд
+ал зэргийг цогцоор нь хамарсан шийдэл
+ []
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.5pt): 
+(fancyhdr)                Make it at least 14.92621pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.92621pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.42621pt}.
+
+[36]
+Overfull \hbox (4.23439pt too wide) in paragraph at lines 367--368
+[]\TU/TimesNewRoman(0)/m/n/12 Системд хэрэглэгчээс ирэх үйлдэл бүр тодорхой дар
+аалалтайгаар боловсруулагддаг бөгөөд
+ []
+
+
+Overfull \hbox (13.46681pt too wide) in paragraph at lines 369--370
+[]\TU/TimesNewRoman(0)/b/n/12 Чөлөөний хүсэлт үүсгэх урсгал: \TU/TimesNewRoman(
+0)/m/n/12 Хэрэглэгч өөрийн shift болон төрлөөс хамаарсан чөлөөний
+ []
+
+File: images/arch_leave.png Graphic file (type bmp)
+<images/arch_leave.png>
+
+Overfull \hbox (9.98128pt too wide) in paragraph at lines 378--379
+\TU/TimesNewRoman(0)/m/n/12 дээр үндэслэн шүүж, зөвхөн тухайн ажилтанд хамаарах
+ боломжит чөлөөний төрлийг харуулдаг. 
+ []
+
+File: images/arch_purchase.png Graphic file (type bmp)
+<images/arch_purchase.png>
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.5pt): 
+(fancyhdr)                Make it at least 14.92621pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.92621pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.42621pt}.
+
+[37]
+Overfull \hbox (30.8766pt too wide) in paragraph at lines 389--390
+[]\TU/TimesNewRoman(0)/b/n/12 Тайлбар: \TU/TimesNewRoman(0)/m/n/12 Хүсэлтийн мө
+р бүр өөрийн нэр төрөл, тоо хэмжээ, үнэ гэх мэт өгөгдлийг шүүлтүүрээр
+ []
+
+
+Overfull \hbox (30.54689pt too wide) in paragraph at lines 391--392
+[]\TU/TimesNewRoman(0)/b/n/12 Бараа материалын зардал үүсгэх урсгал: \TU/TimesN
+ewRoman(0)/m/n/12 Нэг төрлийн зардлыг олон төрлийн бүтээгдэхүүнээр
+ []
+
+File: images/arch_proexpense.png Graphic file (type bmp)
+<images/arch_proexpense.png>
+
+Overfull \hbox (2.14455pt too wide) in paragraph at lines 400--401
+[]\TU/TimesNewRoman(0)/b/n/12 Тайлбар: \TU/TimesNewRoman(0)/m/n/12 Систем нь ту
+хайн ажилтны хамааралтай салбарын мэдээллийг Employee модель
+ []
+
+File: images/arch_check_data.png Graphic file (type bmp)
+<images/arch_check_data.png>
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.5pt): 
+(fancyhdr)                Make it at least 14.92621pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.92621pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.42621pt}.
+
+[38]
+Overfull \hbox (19.2477pt too wide) in paragraph at lines 412--413
+[]\TU/TimesNewRoman(0)/b/n/12 Тайлбар: \TU/TimesNewRoman(0)/m/n/12 Хэрэглэгчийн
+ authentication (нэвтрэлтийн эрх), employee record шалгалт, өгөгдлийн
+ []
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.5pt): 
+(fancyhdr)                Make it at least 14.92621pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.92621pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.42621pt}.
+
+[39]
+Overfull \hbox (0.81688pt too wide) in paragraph at lines 415--416
+[]\TU/TimesNewRoman(0)/m/n/12 Систем нь алдааг ангилан бүртгэж, тодорхой HTTP к
+одоор хариу өгдөг. Энэ нь хөгжүүлэлт
+ []
+
+File: images/arch_check_error.png Graphic file (type bmp)
+<images/arch_check_error.png>
+)
+Overfull \hbox (4.97998pt too wide) in paragraph at lines 424--19
+\TU/TimesNewRoman(0)/m/n/12 database зэрэг төрлийн алдааг ялган боловсруулж, се
+рверийн log бүртгэлд бүртгэнэ. Ингэснээр
+ []
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.5pt): 
+(fancyhdr)                Make it at least 14.92621pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.92621pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.42621pt}.
+
+[40]
+
+
+Package fancyhdr Warning: \headheight is too small (14.5pt): 
+(fancyhdr)                Make it at least 14.92621pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.92621pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.42621pt}.
+
+[41]
+Underfull \hbox (badness 2707) in paragraph at lines 32--33
+\TU/TimesNewRoman(0)/m/n/12 Record Rules. Odoo Official Documentation. Retrieve
+d from []$[][][][][] [] [] [] [][][] [] [][][][] [] [][][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--39
+[]\TU/TimesNewRoman(0)/m/n/12 OWASP Foundation. (2023). OWASP Application Secur
+ity Ver-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--39
+\TU/TimesNewRoman(0)/m/n/12 ification Standard 4.0.3. Retrieved from []$[][][][
+][] [] [] [] [][][][][] [] [][][] []
+ []
+
+
+Underfull \hbox (badness 6808) in paragraph at lines 40--41
+[]\TU/TimesNewRoman(0)/m/n/12 Polskaya, I., & Puntus, V. (2023). Odoo Enterpris
+e лицензийн үнэ ба зардлыг
+ []
+
+
+Underfull \hbox (badness 4217) in paragraph at lines 40--41
+\TU/TimesNewRoman(0)/m/n/12 бууруулах арга зам. VentorTech Blog. Retrieved from
+ []$[][][][][] [] [] [] [][][][][][] [] [][][][] [] [][][][] []
+ []
+
+
+Underfull \hbox (badness 2197) in paragraph at lines 44--45
+[]\TU/TimesNewRoman(0)/m/n/12 Cudio. (2025). Odoo ERP нэвтрүүлэлтийн зардал: Үн
+э, далд зардал ба төсвийн
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--45
+\TU/TimesNewRoman(0)/m/n/12 зөвлөмж. Cudio Tech Blog. Retrieved from []$[][][][
+][] [] [] [] [][][] [] [][][][][] [] [][][] [] [][][][][] []
+ []
+
+
+
+[42
+
+
+
+]
+\openout2 = `appendix_tables.aux'.
+
+ (./appendix_tables.tex
+AppendixA.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\uppercase' on input line 1.
+
+)
+Overfull \hbox (35.10332pt too wide) in paragraph at lines 1--50
+\TU/TimesNewRoman(0)/b/n/24.88 A. СУДАЛГААНЫ ХҮСНЭГТ, ЛИЦЕНЗИЙН
+ []
+
+
+
+[43
+
+
+]
+\openout2 = `appendix_access_rule.aux'.
+
+ (./appendix_access_rule.tex
+AppendixB.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\uppercase' on input line 1.
+
+)
+
+[44
+
+
+
+
+]
+\openout2 = `appendix_portal_controller.aux'.
+
+ (./appendix_portal_controller.tex
+AppendixC.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\uppercase' on input line 1.
+
+
+Overfull \hbox (5.27682pt too wide) in paragraph at lines 1--3
+\TU/TimesNewRoman(0)/b/n/24.88 C. PORTAL CONTROLLER-ИЙН КОДЫН
+ []
+
+File: images/user_portal_use_case.png Graphic file (type bmp)
+<images/user_portal_use_case.png>
+)
+
+[45
+
+
+
+
+] (./main.aux (./main-pre.aux) (./abstract.aux) (./chapter1_research.aux)
+(./chapter2_license.aux) (./chapter3_architecture.aux) (./appendix_tables.aux)
+(./appendix_access_rule.aux) (./appendix_portal_controller.aux))
+ ***********
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+ ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 285270B039C8E0788F317B0BD018CAF9;6423.
+ ) 
+Here is how much of TeX's memory you used:
+ 23540 strings out of 473832
+ 438415 string characters out of 5719382
+ 1157422 words of memory out of 5000000
+ 46176 multiletter control sequences out of 15000+600000
+ 565211 words of font info for 103 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 115i,13n,120p,645b,1966s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on main.xdv (52 pages, 660576 bytes).
